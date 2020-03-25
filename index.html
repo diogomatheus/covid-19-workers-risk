@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Covid-19 (coronavírus): Análise de risco por ocupação no Brasil</title>
+        <title>COVID-19: Risco de Contágio por Ocupação</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="Análise de risco realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.">
-        <meta name="keywords" content="covid-19, coronavírus, análise, risco por ocupação, brasil">
+        <meta name="description" content="Análise de risco de contágio por ocupação considerando exposição à doenças e proximidade física realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.">
+        <meta name="keywords" content="covid-19, coronavírus, análise, risco, contágio, ocupação, exposição à doenças, proximidade física, brasil, EUA, Estados Unidos">
         <meta name="robots" content="all" />
 
         <link rel="shortcut icon" href="image/favicon.png" type="image/ico"/>
@@ -22,7 +22,7 @@
         <link type="text/css" rel="stylesheet" href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" />
         <!--Import DataTables plugin-->
         <link rel="stylesheet" type="text/css" href="plugins/DataTables/datatables.min.css"/>
-         <!--Import application style-->
+        <!--Import application style-->
         <link type="text/css" rel="stylesheet" href="application.css" rel="stylesheet" />
 
         <!--Let browser know website is optimized for mobile-->
@@ -36,16 +36,12 @@
         <header>
             <nav class="light-blue cyan darken-2">
                 <div class="nav-wrapper">
-                    <a href="index.html" class="brand-logo center">Covid-19 (coronavírus)</a>
+                    <a href="index.html" class="brand-logo center">COVID-19</a>
                 </div>
             </nav>
         </header>
         <main>
             <div class="container">
-                <div class="center-align">
-                    <br />
-                    <img class="responsive-img" src="image/ufrj-100-anos-azul-horizontal.svg">
-                </div>
                 <div class="row">
                     <div class="col s12">
                         <div class="center-align"><h3>Análise de risco por ocupação no Brasil</h3></div>
@@ -58,27 +54,42 @@
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <table id="datatable" class="display" width="100%"></table>
+                        <table id="datatable" class="display responsive-table" width="100%"></table>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12">
-                        <h4>Parceiros</h4>
+                        <p>Fonte: <a href="https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html">The Workers Who Face the Greatest Coronavirus Risk</a> - Lazaro Gamio (New York Times), <a href="http://trabalho.gov.br/rais">Relação Anual de Informações Sociais</a> (RAIS), <a href="http://www.mtecbo.gov.br/cbosite/pages/informacoesGerais.jsf">Classificação Brasileira de Ocupações</a> (CBO). Dados sobre número de pessoas empregadas e salário médio são da RAIS de dezembro de 2018, a mais recente disponível.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12"><h4>Parceiros</h4></div>
+                    <div class="col s12">
                         <div class="center-align">
-                            <a href="https://coppe.ufrj.br/">
-                                <img class="responsive-img" src="image/logo-coppe.png" alt="COPPE" title="COPPE" style="max-width: 130px; margin-left: 15px;">
-                            </a>
                             <a href="http://labfuturo.cos.ufrj.br/">
-                                <img class="responsive-img" src="image/logo-laboratorio-futuro.bmp" alt="Laboratório do Futuro" title="Laboratório do Futuro" style="max-width: 120px; margin-left: 15px;">
+                                <img class="responsive-img" src="image/logo-laboratorio-futuro.bmp" alt="Laboratório do Futuro" title="Laboratório do Futuro" style="max-width: 150px;">
                             </a>
                             <a href="https://laboregov.com/">
-                                <img class="responsive-img" src="image/logo-labore.jpg" alt="LABORE" title="LABORE" style="max-width: 120px; margin-left: 15px;">
+                                <img class="responsive-img" src="image/logo-labore.jpg" alt="LABORE" title="LABORE" style="max-width: 120px; margin-left: 40px;">
                             </a>
                             <a href="http://lens.cos.ufrj.br/es/">
-                                <img class="responsive-img" src="image/logo-lens.gif" alt="Laboratório LENS" title="Laboratório LENS" style="max-width: 250px; margin-left: 15px;">
+                                <img class="responsive-img" src="image/logo-lens.gif" alt="Laboratório LENS" title="Laboratório LENS" style="max-width: 250px; margin-left: 40px;">
                             </a>
                             <a href="http://reuse.cos.ufrj.br/">
-                                <img class="responsive-img" src="image/logo-software-reuse-team.png" alt="Grupo de Reutilização de Software (COPPE/UFRJ)" title="Grupo de Reutilização de Software (COPPE/UFRJ)" style="max-width: 150px;">
+                                <img class="responsive-img" src="image/logo-software-reuse-team.png" alt="Grupo de Reutilização de Software (COPPE/UFRJ)" title="Grupo de Reutilização de Software (COPPE/UFRJ)" style="max-width: 150px; margin-left: 30px;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="center-align">
+                            <a href="https://coppe.ufrj.br/">
+                                <img class="responsive-img" src="image/ufrj-100-anos-azul-horizontal.svg" alt="UFRJ" title="UFRJ" style="max-width: 120px;">
+                            </a>
+                            <a href="https://coppe.ufrj.br/">
+                                <img class="responsive-img" src="image/logo-coppe.png" alt="COPPE" title="COPPE" style="max-width: 120px; margin-left: 25px;">
+                            </a>
+                            <a href="https://www.cos.ufrj.br/">
+                                <img class="responsive-img" src="image/logo-pesc.png" alt="PESC" title="PESC" style="max-width: 120px; margin-left: 35px;">
                             </a>
                         </div>
                     </div>
@@ -89,8 +100,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col s6">
-                        <h5 class="white-text">Covid-19 (coronavírus): Análise de risco por ocupação no Brasil</h5>
-                        <p class="grey-text text-lighten-4">Análise de risco realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.</p>
+                        <h5 class="white-text">COVID-19: Risco de Contágio por Ocupação</h5>
+                        <p class="grey-text text-lighten-4">Análise de risco de contágio por ocupação considerando exposição à doenças e proximidade física realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.</p>
                     </div>
                     <div class="col offset-s2 s4">
                         <h5 class="white-text">Links úteis</h5>

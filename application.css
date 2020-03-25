@@ -12,3 +12,49 @@ main {
 	width: 100%;
 	height: 500px
 }
+
+@media screen and (max-width:992px) and (min-width:600px){
+	#datatable>thead>tr>th{
+		width: 100% !important;
+		height: 40px !important;
+		padding: 0px !important;
+		border-bottom: 1px solid #ccc;
+	}
+	#datatable>tbody>tr>td{
+		width: 100% !important;
+		height: 40px !important;
+		padding: 0px !important;
+	}
+	#datatable>thead>tr{
+		padding: 0px !important;
+	}
+	#datatable>thead{
+		width: 20% !important;
+	}
+	#datatable>tbody{
+		width: 79% !important;
+	}
+}
+
+@media screen and (max-width:599px){
+	#datatable>thead>tr>th{
+		width: 100% !important;
+		height: 40px !important;
+		padding: 0px !important;
+		border-bottom: 1px solid #ccc;
+	}
+	#datatable>tbody>tr>td{
+		width: 100% !important;
+		height: 40px !important;
+		padding: 0px !important;
+	}
+	#datatable>thead>tr{
+		padding: 0px !important;
+	}
+	#datatable>thead{
+		width: 30% !important;
+	}
+	#datatable>tbody{
+		width: 69% !important;
+	}
+}

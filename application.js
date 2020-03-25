@@ -32,6 +32,9 @@ am4core.ready(function() {
 	bullet.stroke = am4core.color("#b71c1c");
 	bullet.hiddenState.properties.opacity = 0;
 	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
+	bullet.events.on("hit", function(event){
+		console.log(event.target.dataItem.dataContext);
+	});
 
 	var hoverState = bullet.states.create("hover");
 	hoverState.properties.fillOpacity = 0.5;
@@ -45,6 +48,7 @@ am4core.ready(function() {
 
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.behavior = "zoomXY";
+	// chart.cursor.snapToSeries = series;
 
 	chart.scrollbarX = new am4core.Scrollbar();
 	chart.scrollbarY = new am4core.Scrollbar();
