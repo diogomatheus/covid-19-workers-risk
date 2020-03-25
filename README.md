@@ -1,2 +1,2 @@
-# covid-19-workers-risk
-Análise de risco por ocupação realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.
+# COVID-19: Risco de Contágio por Ocupação no Brasil
+Análise de risco de contágio por ocupação considerando exposição à doenças e proximidade física realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.

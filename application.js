@@ -20,8 +20,6 @@ am4core.ready(function() {
 	series.dataFields.valueX = "physical_proximity";
 	series.dataFields.value = "employment";
 	series.strokeOpacity = 0;
-	series.sequencedInterpolation = true;
-	series.tooltip.pointerOrientation = "vertical";
 
 	var bullet = series.bullets.push(new am4core.Circle());
 	bullet.fill = am4core.color("#e53935");
@@ -35,6 +33,7 @@ am4core.ready(function() {
 	bullet.events.on("hit", function(event){
 		console.log(event.target.dataItem.dataContext);
 	});
+	bullet.showTooltipOn = "hit";
 
 	var hoverState = bullet.states.create("hover");
 	hoverState.properties.fillOpacity = 0.5;
@@ -48,6 +47,7 @@ am4core.ready(function() {
 
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.behavior = "zoomXY";
+	//chart.cursor.showTooltipOn = "always";
 	// chart.cursor.snapToSeries = series;
 
 	chart.scrollbarX = new am4core.Scrollbar();
