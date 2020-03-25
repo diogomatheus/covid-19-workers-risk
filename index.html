@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid-19 (coronavírus): Análise de risco por ocupação no Brasil</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Análise de risco por ocupação realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.">
+        <meta name="keywords" content="covid-19, coronavírus, análise, risco por ocupação, brasil">
+        <meta name="robots" content="all" />
+
+        <link rel="shortcut icon" href="image/favicon.png" type="image/ico"/>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="image/apple-touch-icon-iphone.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="image/apple-touch-icon-ipad.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="image/apple-touch-icon-iphone-retina.png"/>
+
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize plugin-->
+        <link type="text/css" rel="stylesheet" href="plugins/materialize/css/materialize.min.css" media="screen,projection"/>
+        <!--Import noUiSlider plugin-->
+        <link type="text/css" rel="stylesheet" href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" />
+        <!--Import DataTables plugin-->
+        <link rel="stylesheet" type="text/css" href="plugins/DataTables/datatables.min.css"/>
+         <!--Import application style-->
+        <link type="text/css" rel="stylesheet" href="application.css" rel="stylesheet" />
+
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <header>
+            <nav class="light-blue cyan darken-2">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo center">Covid-19 (coronavírus)</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <div class="center">
+                    <br />
+                    <img class="responsive-img" src="image/ufrj-100-anos-azul-horizontal.svg">
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <div id="main-content">
+                            <div class="center"><h3>Análise de risco por ocupação no Brasil</h3></div>
+                            <br />
+                            <p>Nível do risco de contágio:</p>
+                            <div id="slider"></div>
+                            <br />
+                            <div id="chart"></div>
+                            <br />
+                            <table id="datatable" class="display" width="100%"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="page-footer cyan darken-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col s6">
+                        <h5 class="white-text">Covid-19 (coronavírus): Análise de risco por ocupação no Brasil</h5>
+                        <p class="grey-text text-lighten-4">Análise de risco por ocupação realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.</p>
+                    </div>
+                    <div class="col offset-s2 s4">
+                        <h5 class="white-text">Links úteis</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="https://coronavirus.saude.gov.br/">O que é Covid-19 (coronavírus)?</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.who.int/health-topics/coronavirus">OMS Covid-19 (coronavírus)</a></li>
+                            <li><a class="grey-text text-lighten-3" href="https://www.bing.com/covid">Bing Covid-19 Tracker</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container center-align">
+                    © 2020, enfrentamento à Covid-19 (coronavírus).
+                </div>
+            </div>
+        </footer>
+
+        <!--Import jquery plugin-->
+        <script type="text/javascript" src="plugins/jquery/jquery-3.1.1.js"></script>
+
+        <!--Import materialize plugin-->
+        <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
+
+        <!--Import nouislider plugin-->
+        <script type="text/javascript" src="plugins/noUiSlider/nouislider.min.js"></script>
+
+        <!--Import amcharts plugin-->
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/frozen.js"></script>
+
+        <!--Import DataTables plugin-->
+        <script type="text/javascript" src="plugins/DataTables/datatables.min.js"></script>
+
+        <!--Import application dataset and script-->
+        <script type="text/javascript" src="data/brazil-data.json"></script>
+        <script type="text/javascript" src="application.js"></script>
+    </body>
+</html>
