@@ -3,7 +3,7 @@ am4core.ready(function() {
 	// Build the chart
 	am4core.useTheme(am4themes_frozen);
 	var chart = am4core.create("chart", am4charts.XYChart);
-	chart.numberFormatter.numberFormat = "#.##";
+	chart.language.locale = am4lang_pt_BR;
 
 	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
 	valueAxisY.title.text = "Exposição à doenças ou infecções";
@@ -31,7 +31,7 @@ am4core.ready(function() {
 	bullet.fillOpacity = 0.5;
 	bullet.stroke = am4core.color("#b71c1c");
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
+	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
 
 	var hoverState = bullet.states.create("hover");
 	hoverState.properties.fillOpacity = 0.5;
@@ -77,20 +77,76 @@ am4core.ready(function() {
 	});
 
 	var datatable = $('#datatable').DataTable({
+		responsive: true,
 		paging: true,
 		data: dataset,
         columns: [
-            { title: 'Nome', data: "title" },
-            { title: 'Nº de trabalhadores', data: "employment" },
-            { title: 'Nível de risco', data: "score", render: function (data, type, row) {
+            { title: 'Ocupação', data: "title" },
+            { title: 'Trabalhadores', data: "employment", render: function (data, type, row) {
+                var formatter = new Intl.NumberFormat('pt-BR', {
+					style: 'decimal'
+				});
+
+				return formatter.format(data);
+            }},
+            { title: 'Média salarial', data: "average_salary", render: function (data, type, row) {
+                var formatter = new Intl.NumberFormat('pt-BR', {
+					style: 'currency',
+					currency: 'BRL',
+				});
+
+				return formatter.format(data);
+            }},
+            { title: 'Risco', data: "score", render: function (data, type, row) {
                 return Number(data).toFixed(2) + '%';
             }}
         ],
-        order: [[ 2, "desc" ]],
+        order: [[ 3, "desc" ]],
         "language": {
-            "url": "plugins/DataTables/Portuguese-Brasil.json"
-        }
+		    "sEmptyTable": "Nenhum registro encontrado",
+		    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+		    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+		    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+		    "sInfoPostFix": "",
+		    "sInfoThousands": ".",
+		    "sLengthMenu": "_MENU_ resultados por página",
+		    "sLoadingRecords": "Carregando...",
+		    "sProcessing": "Processando...",
+		    "sZeroRecords": "Nenhum registro encontrado",
+		    "sSearch": "Pesquisar",
+		    "oPaginate": {
+		        "sNext": "Próximo",
+		        "sPrevious": "Anterior",
+		        "sFirst": "Primeiro",
+		        "sLast": "Último"
+		    },
+		    "oAria": {
+		        "sSortAscending": ": Ordenar colunas de forma ascendente",
+		        "sSortDescending": ": Ordenar colunas de forma descendente"
+		    },
+		    "select": {
+		        "rows": {
+		            "_": "Selecionado %d linhas",
+		            "0": "Nenhuma linha selecionada",
+		            "1": "Selecionado 1 linha"
+		        }
+		    },
+		    "thousands": ".",
+		    "decimal": ","
+		}
 	});
+
+	/*
+	// Select one row and display on chart
+	$('#datatable tbody').on('click', 'tr', function () {
+        if($(this).hasClass('selected')) {
+            $(this).removeClass('selected');
+        } else {
+            datatable.$('tr.selected').removeClass('selected');
+            $(this).addClass('selected');
+        }
+    });
+    */
 
 	// Update the chart when change the slider
 	slider.noUiSlider.on('update', function (values, handle) {
