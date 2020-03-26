@@ -1,10 +1,8 @@
 am4core.ready(function() {
 
-	// Build the chart
+	// Bubble chart
 	am4core.useTheme(am4themes_frozen);
 	var chart = am4core.create("chart", am4charts.XYChart);
-	chart.language.locale = am4lang_pt_BR;
-
 	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
 	valueAxisY.title.text = "Exposição à doenças ou infecções";
 	valueAxisY.renderer.ticks.template.disabled = true;
@@ -17,31 +15,34 @@ am4core.ready(function() {
 	valueAxisX.renderer.axisFills.template.disabled = true;
   	valueAxisX.max = 110;
 
+  	chart.language.locale = am4lang_pt_BR;
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.behavior = "zoomXY";
 	chart.scrollbarX = new am4core.Scrollbar();
 	chart.scrollbarY = new am4core.Scrollbar();
 	chart.legend = new am4charts.Legend();
     chart.legend.useDefaultMarker = true;
+   
     var marker = chart.legend.markers.template.children.getIndex(0);
     marker.width = 20;
     marker.height = 20;
 
+    // Brazilian data
 	var brazil_data = JSON.parse(data);
-	var dataset = brazil_data.filter(function(item) {
-		return item.score >= 80 && item.score <= 100
-	});
 
-	// Create series
+	// Insert filtered data
+	var dataset = brazil_data.filter(function(item) {
+		return item.score >= 50 && item.score <= 100
+	});
 	addChartSeries(chart, dataset);
 
-	// Build the slider
+	// Build slider
 	var slider = document.getElementById('slider');
 	noUiSlider.create(slider, {
 		orientation: 'horizontal',
 		tooltips: [true, true],
 		connect: true,
-		start: [80, 100],
+		start: [50, 100],
 		range: {
 			'min': 0,
 			'max': 100
@@ -174,10 +175,6 @@ am4core.ready(function() {
     */
 
 });
-
-function updateChartSeries(chart, dataset) {
-
-}
 
 function addChartSeries(chart, dataset) {
 	var chartSeries = [
