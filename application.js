@@ -9,11 +9,13 @@ am4core.ready(function() {
 	valueAxisY.title.text = "Exposição à doenças ou infecções";
 	valueAxisY.renderer.ticks.template.disabled = true;
 	valueAxisY.renderer.axisFills.template.disabled = true;
+	valueAxisY.max = 110;
 
 	var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
 	valueAxisX.title.text = "Proximidade física";
 	valueAxisX.renderer.ticks.template.disabled = true;
 	valueAxisX.renderer.axisFills.template.disabled = true;
+  	valueAxisX.max = 110;
 
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.behavior = "zoomXY";
