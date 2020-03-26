@@ -16,25 +16,30 @@ am4core.ready(function() {
 	valueAxisX.renderer.axisFills.template.disabled = true;
 
 	var series = chart.series.push(new am4charts.LineSeries());
+	// series.dataFields.categoryX = "group";
+	// series.dataFields.categoryY = "group";
 	series.dataFields.valueY = "exposed_to_disease_or_infections";
 	series.dataFields.valueX = "physical_proximity";
 	series.dataFields.value = "employment";
 	series.strokeOpacity = 0;
 
+	// chart.legend = new am4charts.Legend();
+
 	var bullet = series.bullets.push(new am4core.Circle());
 	bullet.fill = am4core.color("#e53935");
-	bullet.propertyFields.fill = "color";
+	bullet.propertyFields.fill = "group_color";
+	bullet.fillOpacity = 0.4;
 	bullet.strokeOpacity = 0.5;
-	bullet.strokeWidth = 2;
-	bullet.fillOpacity = 0.5;
-	bullet.stroke = am4core.color("#b71c1c");
+	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
 	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
 	bullet.showTooltipOn = "hit";
 
+	bullet.propertyFields.stroke = "group_color";
+
 	var hoverState = bullet.states.create("hover");
-	hoverState.properties.fillOpacity = 0.5;
-	hoverState.properties.strokeOpacity = 0.5;
+	hoverState.properties.fillOpacity = 0.6;
+	hoverState.properties.strokeOpacity = 0.7;
 
 	series.heatRules.push({ target: bullet, min: 10, max: 50, property: "radius" });
 
@@ -65,7 +70,6 @@ am4core.ready(function() {
 			'max': 100
 		},
 		step: 1,
-    	limit: 50,
     	format: {
 	        to: function (value) {
 	            return value + '%';
