@@ -33,7 +33,7 @@ am4core.ready(function() {
 	});
 
 	// Create series
-	generate_chart_series(chart, dataset);
+	addChartSeries(chart, dataset);
 
 	// Build the slider
 	var slider = document.getElementById('slider');
@@ -118,6 +118,49 @@ am4core.ready(function() {
 		}
 	});
 
+	// Update interface after slider change
+	slider.noUiSlider.on('change', function (values, handle) {
+		var sliderValues = slider.noUiSlider.get();
+		var unavailableSeries = [];
+		chart.series.each(function(series) {
+			if(!series.visible) unavailableSeries.push(series.name);
+			series.data = brazil_data.filter(function(item) {
+				return item.score >= parseInt(sliderValues[0]) && 
+					   item.score <= parseInt(sliderValues[1]) && 
+					   series.name === item.group;
+			});
+		});
+
+		var datatable_dataset = brazil_data.filter(function(item) {
+			return item.score >= parseInt(sliderValues[0]) && 
+				   item.score <= parseInt(sliderValues[1]) && 
+				   unavailableSeries.indexOf(item.group) === -1;
+		});
+		datatable.clear();
+	    datatable.rows.add(datatable_dataset);
+	    datatable.draw();
+	});
+
+	// Update infertace after legent hit
+	chart.legend.itemContainers.template.events.on("hit", function(ev) {
+		var sliderValues = slider.noUiSlider.get();
+		var unavailableSeries = [];	
+		chart.series.each(function(series) {
+			var visible = !series.visible;
+			if(series.name === ev.target.dataItem.dataContext.name) visible = !visible;
+			if(visible) unavailableSeries.push(series.name);
+		});
+		var dataset = brazil_data.filter(function(item) {
+			return item.score >= parseInt(sliderValues[0]) && 
+				   item.score <= parseInt(sliderValues[1]) && 
+				   unavailableSeries.indexOf(item.group) === -1;
+		});
+
+		datatable.clear();
+	    datatable.rows.add(dataset);
+	    datatable.draw();
+	});
+
 	/*
 	// Select one row and display on chart
 	$('#datatable tbody').on('click', 'tr', function () {
@@ -130,80 +173,36 @@ am4core.ready(function() {
     });
     */
 
-	// Update the chart when change the slider
-	slider.noUiSlider.on('change', function (values, handle) {
-		var dataset = brazil_data.filter(function(item) {
-			var min = Number(values[0].replace('%', ''));
-			var max = Number(values[1].replace('%', ''));
-			return item.score >= min && item.score <= max
-		});
-
-		// Create series
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		chart.series.removeIndex(0).dispose();
-		generate_chart_series(chart, dataset);
-
-		datatable.clear();
-	    datatable.rows.add(dataset);
-	    datatable.draw();
-	});
-
 });
 
-function generate_chart_series(chart, dataset) {
-	create_chart_series(chart, "Alimentação", "#e03a71", dataset.filter(function(item) {
-		return item.group == "Alimentação"
-	}));
-	create_chart_series(chart, "Agropecuária e pesca", "#10540a", dataset.filter(function(item) {
-		return item.group == "Agropecuária e pesca"
-	}));
-	create_chart_series(chart, "Artes, Entretenimento e Mídia", "#9e8b75", dataset.filter(function(item) {
-		return item.group == "Artes, Entretenimento e Mídia"
-	}));
-	create_chart_series(chart, "Ciências, Engenharia e Computação", "#8debe0", dataset.filter(function(item) {
-		return item.group == "Ciências, Engenharia e Computação"
-	}));
-	create_chart_series(chart, "Comércio", "#abf051", dataset.filter(function(item) {
-		return item.group == "Comércio"
-	}));
-	create_chart_series(chart, "Construção e Extração", "#8a8a8a", dataset.filter(function(item) {
-		return item.group == "Construção e Extração"
-	}));
-	create_chart_series(chart, "Educação", "#deb147", dataset.filter(function(item) {
-		return item.group == "Educação"
-	}));
-	create_chart_series(chart, "Indústria", "#314b6b", dataset.filter(function(item) {
-		return item.group == "Indústria"
-	}));
-	create_chart_series(chart, "Jurídico e Serviço Social", "#4acc3b", dataset.filter(function(item) {
-		return item.group == "Jurídico e Serviço Social"
-	}));
-	create_chart_series(chart, "Negócios, Finanças e Gestão", "#343deb", dataset.filter(function(item) {
-		return item.group == "Negócios, Finanças e Gestão"
-	}));
-	create_chart_series(chart, "Saúde", "#e03a3a", dataset.filter(function(item) {
-		return item.group == "Saúde"
-	}));
-	create_chart_series(chart, "Serviços", "#d051f0", dataset.filter(function(item) {
-		return item.group == "Serviços"
-	}));
-	create_chart_series(chart, "Transportes", "#f7b78f", dataset.filter(function(item) {
-		return item.group == "Transportes"
-	}));
+function updateChartSeries(chart, dataset) {
+
 }
 
-function create_chart_series(chart, name, color, data) {
+function addChartSeries(chart, dataset) {
+	var chartSeries = [
+		{ name: 'Alimentação', color: '#e03a71' },
+		{ name: 'Agropecuária e pesca', color: '#10540a' },
+		{ name: 'Artes, Entretenimento e Mídia', color: '#9e8b75' },
+		{ name: 'Ciências, Engenharia e Computação', color: '#8debe0' },
+		{ name: 'Comércio', color: '#abf051' },
+		{ name: 'Construção e Extração', color: '#8a8a8a' },
+		{ name: 'Educação', color: '#deb147' },
+		{ name: 'Indústria', color: '#314b6b' },
+		{ name: 'Jurídico e Serviço Social', color: '#4acc3b' },
+		{ name: 'Negócios, Finanças e Gestão', color: '#343deb' },
+		{ name: 'Saúde', color: '#e03a3a' },
+		{ name: 'Serviços', color: '#d051f0' },
+		{ name: 'Transportes', color: '#f7b78f' }
+	];
+	chartSeries.forEach(function(series) {
+		createChartSeries(chart, series.name, series.color, dataset.filter(function(item) {
+			return item.group == series.name
+		}));
+	});
+}
+
+function createChartSeries(chart, name, color, data) {
 	var series = chart.series.push(new am4charts.LineSeries());
 	series.dataFields.valueY = "exposed_to_disease_or_infections";
 	series.dataFields.valueX = "physical_proximity";
