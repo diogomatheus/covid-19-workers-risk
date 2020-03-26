@@ -13,6 +13,10 @@ main {
 	height: 800px
 }
 
+#datatable_length {
+	display: none;
+}
+
 @media screen and (max-width:992px) and (min-width:600px){
 	#datatable>thead>tr>th{
 		width: 100% !important;

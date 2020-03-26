@@ -7,13 +7,13 @@ am4core.ready(function() {
 	valueAxisY.title.text = "Exposição à doenças ou infecções";
 	valueAxisY.renderer.ticks.template.disabled = true;
 	valueAxisY.renderer.axisFills.template.disabled = true;
-	valueAxisY.max = 110;
+	valueAxisY.max = 120;
 
 	var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
 	valueAxisX.title.text = "Proximidade física";
 	valueAxisX.renderer.ticks.template.disabled = true;
 	valueAxisX.renderer.axisFills.template.disabled = true;
-  	valueAxisX.max = 110;
+  	valueAxisX.max = 120;
 
   	chart.language.locale = am4lang_pt_BR;
 	chart.cursor = new am4charts.XYCursor();
@@ -224,7 +224,7 @@ function createChartSeries(chart, name, color, data) {
 	hoverState.properties.fillOpacity = 0.6;
 	hoverState.properties.strokeOpacity = 0.7;
 
-	series.heatRules.push({ target: bullet, min: 5, max: 40, property: "radius" });
+	series.heatRules.push({ target: bullet, min: 5, max: 30, property: "radius" });
 	bullet.adapter.add("tooltipY", function (tooltipY, target) {
 	    return -target.radius;
 	});
