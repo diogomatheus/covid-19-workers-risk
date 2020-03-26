@@ -21,11 +21,13 @@ am4core.ready(function() {
 	chart.scrollbarX = new am4core.Scrollbar();
 	chart.scrollbarY = new am4core.Scrollbar();
 	chart.legend = new am4charts.Legend();
+	chart.legend.labels.template.fontSize = 12;
     chart.legend.useDefaultMarker = true;
    
     var marker = chart.legend.markers.template.children.getIndex(0);
     marker.width = 20;
     marker.height = 20;
+    marker.cornerRadius(12, 12, 12, 12);
 
     // Brazilian data
 	var brazil_data = JSON.parse(data);
