@@ -17,6 +17,10 @@ main {
 	display: none;
 }
 
+#research-notes {
+	font-size: 12px;
+}
+
 @media screen and (max-width:992px) and (min-width:600px){
 	#datatable>thead>tr>th{
 		width: 100% !important;
