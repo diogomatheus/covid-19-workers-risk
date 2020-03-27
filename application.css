@@ -44,7 +44,11 @@ main {
 	}
 }
 
-@media screen and (max-width:599px){
+@media screen and (max-width:599px) {
+	nav .brand-logo {
+	    font-size: 1.3rem;
+	}
+
 	#datatable>thead>tr>th{
 		width: 100% !important;
 		height: 40px !important;
