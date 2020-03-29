@@ -65,13 +65,14 @@ am4core.ready(function() {
 		paging: true,
 		data: dataset,
         columns: [
-            { title: 'Ocupação', data: "title" },
+            { title: 'Ocupação', data: "title", render: function (data, type, row) {
+                return data + ' <i class="material-icons tiny tooltipped" data-tooltip="Ocupação SOC: ' + row.soc_title + '">info_outline</i>';
+            }},
             { title: 'Categoria', data: "group" },
             { title: 'Trabalhadores', data: "employment", render: function (data, type, row) {
                 var formatter = new Intl.NumberFormat('pt-BR', {
 					style: 'decimal'
 				});
-
 				return formatter.format(data);
             }},
             { title: 'Média salarial', data: "average_salary", render: function (data, type, row) {
@@ -121,6 +122,14 @@ am4core.ready(function() {
 		}
 	});
 
+	// Tooltip configuration
+	$('.tooltipped').tooltip();
+
+	// Tooltip configuration based on datatables events
+	datatable.on('draw', function () {
+    	$('.tooltipped').tooltip();
+	});
+
 	// Update interface after slider change
 	slider.noUiSlider.on('change', function (values, handle) {
 		var sliderValues = slider.noUiSlider.get();
@@ -142,6 +151,9 @@ am4core.ready(function() {
 		datatable.clear();
 	    datatable.rows.add(datatable_dataset);
 	    datatable.draw();
+
+	    // Tooltip configuration
+	    $('.tooltipped').tooltip();
 	});
 
 	// Update infertace after legent hit
@@ -218,7 +230,7 @@ function createChartSeries(chart, name, color, data) {
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
+	bullet.tooltipText = "[bold]{title}:[/]\nOcupação SOC: {soc_title}\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
 	bullet.showTooltipOn = "hit";
 	bullet.propertyFields.stroke = "group_color";
 
