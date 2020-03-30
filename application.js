@@ -3,6 +3,7 @@ am4core.ready(function() {
 	// Bubble chart
 	am4core.useTheme(am4themes_frozen);
 	var chart = am4core.create("chart", am4charts.XYChart);
+
 	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
 	valueAxisY.title.text = "Exposição à doenças ou infecções";
 	valueAxisY.renderer.ticks.template.disabled = true;
@@ -15,6 +16,7 @@ am4core.ready(function() {
 	valueAxisX.renderer.axisFills.template.disabled = true;
   	valueAxisX.max = 100;
 
+  	// chart.maskBullets = false;
   	chart.language.locale = am4lang_pt_BR;
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.behavior = "zoomXY";
@@ -151,9 +153,6 @@ am4core.ready(function() {
 		datatable.clear();
 	    datatable.rows.add(datatable_dataset);
 	    datatable.draw();
-
-	    // Tooltip configuration
-	    $('.tooltipped').tooltip();
 	});
 
 	// Update infertace after legent hit
@@ -222,6 +221,7 @@ function createChartSeries(chart, name, color, data) {
 	series.name = name;
 	series.data = data;
 	series.fill = am4core.color(color);
+	series.tooltip.pointerOrientation = "down";
 
 	var bullet = series.bullets.push(new am4core.Circle());
 	bullet.fill = am4core.color("#e53935");
