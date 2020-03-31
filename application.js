@@ -86,7 +86,11 @@ am4core.ready(function() {
 				return formatter.format(data);
             }},
             { title: 'Risco', data: "score", render: function (data, type, row) {
-                return Number(data).toFixed(2) + '%';
+            	var text = 'Exposição à doenças: ' + row.exposed_to_disease_or_infections;
+            	text += '<br />Proximidade física: ' + row.physical_proximity;
+            	text += '<br />Contato com outras pessoas: ' + row.contact_with_others;
+            	var tooltip = ' <i class="material-icons tiny tooltipped" data-tooltip="' + text + '">info_outline</i>';
+                return Number(data).toFixed(2) + '%' + tooltip;
             }}
         ],
         order: [[ 4, "desc" ]],
@@ -125,11 +129,11 @@ am4core.ready(function() {
 	});
 
 	// Tooltip configuration
-	$('.tooltipped').tooltip();
+	$('.tooltipped').tooltip({ html: true });
 
 	// Tooltip configuration based on datatables events
 	datatable.on('draw', function () {
-    	$('.tooltipped').tooltip();
+    	$('.tooltipped').tooltip({ html: true });
 	});
 
 	// Update interface after slider change
@@ -230,7 +234,7 @@ function createChartSeries(chart, name, color, data) {
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}";
+	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}";
 	bullet.showTooltipOn = "hit";
 	bullet.propertyFields.stroke = "group_color";
 
