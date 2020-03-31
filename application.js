@@ -68,31 +68,49 @@ am4core.ready(function() {
 		data: dataset,
         columns: [
             { title: 'Ocupação', data: "title", render: function (data, type, row) {
-                return data + ' <i class="material-icons tiny tooltipped" data-tooltip="Ocupação SOC: ' + row.soc_title + '">info_outline</i>';
+            	if(type == 'display') {
+					return data + ' <i class="material-icons tiny tooltipped" data-tooltip="Ocupação SOC: ' + row.soc_title + '">info_outline</i>';
+				} else {
+					return data;
+				}
             }},
             { title: 'Categoria', data: "group" },
             { title: 'Trabalhadores', data: "employment", render: function (data, type, row) {
-                var formatter = new Intl.NumberFormat('pt-BR', {
-					style: 'decimal'
-				});
-				return formatter.format(data);
+				if(type == 'display') {
+					var formatter = new Intl.NumberFormat('pt-BR', {
+						style: 'decimal'
+					});
+					return formatter.format(data);
+				} else {
+					return data;
+				}
             }},
             { title: 'Média salarial', data: "average_salary", render: function (data, type, row) {
-                var formatter = new Intl.NumberFormat('pt-BR', {
-					style: 'currency',
-					currency: 'BRL',
-				});
-
-				return formatter.format(data);
+				if(type == 'display') {
+					var formatter = new Intl.NumberFormat('pt-BR', {
+						style: 'currency',
+						currency: 'BRL',
+					});
+					return formatter.format(data);
+				} else {
+					return data;
+				}
             }},
             { title: 'Risco', data: "score", render: function (data, type, row) {
-            	var text = 'Exposição à doenças: ' + row.exposed_to_disease_or_infections;
-            	text += '<br />Proximidade física: ' + row.physical_proximity;
-            	text += '<br />Contato com outras pessoas: ' + row.contact_with_others;
-            	var tooltip = ' <i class="material-icons tiny tooltipped" data-tooltip="' + text + '">info_outline</i>';
-                return Number(data).toFixed(2) + '%' + tooltip;
+				if(type == 'display') {
+					var text = 'Exposição à doenças: ' + row.exposed_to_disease_or_infections;
+	            	text += '<br />Proximidade física: ' + row.physical_proximity;
+	            	text += '<br />Contato com outras pessoas: ' + row.contact_with_others;
+	            	var tooltip = ' <i class="material-icons tiny tooltipped" data-tooltip="' + text + '">info_outline</i>';
+	                return Number(data).toFixed(2) + '%' + tooltip;
+				} else {
+					return data;
+				}
             }}
         ],
+        "columnDefs": [
+			{ 'width': '65px', 'targets': 4 }
+		],
         order: [[ 4, "desc" ]],
         "language": {
 		    "sEmptyTable": "Nenhum registro encontrado",
