@@ -16,7 +16,7 @@ am4core.ready(function() {
 	valueAxisX.renderer.axisFills.template.disabled = true;
   	valueAxisX.max = 100;
 
-  	chart.maskBullets = false;
+  	// chart.maskBullets = false;
   	chart.language.locale = am4lang_pt_BR;
 	chart.cursor = new am4charts.XYCursor();
 	chart.cursor.behavior = "zoomXY";
