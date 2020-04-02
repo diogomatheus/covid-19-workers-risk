@@ -6,4 +6,10 @@
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
+    <url>
+        <loc>http://impactocovid.com.br/municipio.html</loc>
+        <lastmod>2020-04-01T12:00:00-03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
 </urlset>

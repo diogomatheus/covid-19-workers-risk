@@ -1,2 +1,1 @@
-# COVID-19: Risco de Contágio por Ocupação no Brasil
-Análise de risco de contágio por ocupação considerando exposição à doenças e proximidade física realizada com base no cruzamento dos dados de ocupação do Brasil e EUA.
+# Impacto COVID-19

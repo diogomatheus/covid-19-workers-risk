@@ -4,13 +4,45 @@ body {
 	flex-direction: column;
 }
 
+.header {
+    color: #455a64;
+    font-weight: 300;
+}
+
+nav.top-nav h1.header {
+	margin: 0;
+	padding-top: 43px;
+	font-size: 1.5rem;
+	text-align: right
+}
+
+a.sidenav-trigger.top-nav {
+	color: #455a64;
+}
+
+ul.sidenav.sidenav-fixed li.logo {
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
 main {
 	flex: 1 0 auto;
 }
 
-#chart {
+#slider-container {
+	max-width: 90%;
+    margin: auto;
+}
+
+#chart-bubble {
 	width: 100%;
 	height: 800px
+}
+
+#chart-map {
+	width: 100%;
+	height: 500px
 }
 
 #datatable_length {
@@ -21,52 +53,64 @@ main {
 	font-size: 12px;
 }
 
-@media screen and (max-width:992px) and (min-width:600px){
-	#datatable>thead>tr>th{
+@media screen and (max-width:992px) and (min-width:600px) {
+
+	#datatable>thead>tr>th {
 		width: 100% !important;
 		height: 40px !important;
 		padding: 0px !important;
 		border-bottom: 1px solid #ccc;
 	}
-	#datatable>tbody>tr>td{
+
+	#datatable>tbody>tr>td {
 		width: 100% !important;
 		height: 40px !important;
 		padding: 0px !important;
 	}
-	#datatable>thead>tr{
+
+	#datatable>thead>tr {
 		padding: 0px !important;
 	}
-	#datatable>thead{
+
+	#datatable>thead {
 		width: 20% !important;
 	}
-	#datatable>tbody{
+
+	#datatable>tbody {
 		width: 79% !important;
 	}
+
 }
 
 @media screen and (max-width:599px) {
+
 	nav .brand-logo {
 	    font-size: 1.3rem;
 	}
 
-	#datatable>thead>tr>th{
+	#datatable>thead>tr>th {
 		width: 100% !important;
 		height: 40px !important;
 		padding: 0px !important;
 		border-bottom: 1px solid #ccc;
 	}
-	#datatable>tbody>tr>td{
+
+	#datatable>tbody>tr>td {
 		width: 100% !important;
 		height: 40px !important;
 		padding: 0px !important;
 	}
-	#datatable>thead>tr{
+
+	#datatable>thead>tr {
 		padding: 0px !important;
 	}
-	#datatable>thead{
+
+	#datatable>thead {
 		width: 30% !important;
 	}
-	#datatable>tbody{
+
+	#datatable>tbody {
 		width: 69% !important;
 	}
+
 }
