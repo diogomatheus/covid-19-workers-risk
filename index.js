@@ -6,30 +6,29 @@ $(document).ready(function() {
 	$.getJSON('data/cbo-dataset.json', function(data) {
 		// Bubble chart
 		am4core.useTheme(am4themes_frozen);
-		var chart = am4core.create("chart-bubble", am4charts.XYChart);
-
-		var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
-		valueAxisY.title.text = "Exposição à doenças ou infecções";
-		valueAxisY.renderer.ticks.template.disabled = true;
-		valueAxisY.renderer.axisFills.template.disabled = true;
-		valueAxisY.max = 100;
-
-		var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
-		valueAxisX.title.text = "Proximidade física";
-		valueAxisX.renderer.ticks.template.disabled = true;
-		valueAxisX.renderer.axisFills.template.disabled = true;
-	  	valueAxisX.max = 100;
-
-	  	// chart.maskBullets = false;
-	  	chart.language.locale = am4lang_pt_BR;
+		var chart = am4core.create('chart-bubble', am4charts.XYChart);
+		chart.language.locale = am4lang_pt_BR;
 		chart.cursor = new am4charts.XYCursor();
-		chart.cursor.behavior = "zoomXY";
+		chart.cursor.behavior = 'zoomXY';
 		chart.scrollbarX = new am4core.Scrollbar();
 		chart.scrollbarY = new am4core.Scrollbar();
 		chart.legend = new am4charts.Legend();
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
-	   
+
+	    // Y and X configuration
+		var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxisY.title.text = 'Exposição à doenças ou infecções';
+		valueAxisY.renderer.ticks.template.disabled = true;
+		valueAxisY.renderer.axisFills.template.disabled = true;
+		valueAxisY.max = 100;
+		var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
+		valueAxisX.title.text = 'Proximidade física';
+		valueAxisX.renderer.ticks.template.disabled = true;
+		valueAxisX.renderer.axisFills.template.disabled = true;
+	  	valueAxisX.max = 100;
+
+	  	// Marker configuration
 	    var marker = chart.legend.markers.template.children.getIndex(0);
 	    marker.width = 20;
 	    marker.height = 20;
@@ -57,29 +56,26 @@ $(document).ready(function() {
 			},
 			step: 1,
 	    	format: {
-		        to: function (value) {
-		            return value + '%';
-		        },
-		        from: function (value) {
-		            return Number(value.replace('%', ''));
-		        }
+		        to: function (value) { return value + '%'; },
+		        from: function (value) { return Number(value.replace('%', '')); }
 		    }
 		});
 
+		// Datatable configuration
 		var datatable = $('#datatable').DataTable({
 			responsive: true,
 			paging: true,
 			data: dataset,
 	        columns: [
-	            { title: 'Ocupação', data: "title", render: function (data, type, row) {
+	            { title: 'Ocupação', data: 'title', render: function (data, type, row) {
 	            	if(type == 'display') {
 						return data + ' <i class="material-icons tiny tooltipped" data-tooltip="Ocupação SOC: ' + row.soc_title + '">info_outline</i>';
 					} else {
 						return data;
 					}
 	            }},
-	            { title: 'Categoria', data: "group" },
-	            { title: 'Trabalhadores', data: "employment", render: function (data, type, row) {
+	            { title: 'Categoria', data: 'group' },
+	            { title: 'Trabalhadores', data: 'employment', render: function (data, type, row) {
 					if(type == 'display') {
 						var formatter = new Intl.NumberFormat('pt-BR', {
 							style: 'decimal'
@@ -89,7 +85,7 @@ $(document).ready(function() {
 						return data;
 					}
 	            }},
-	            { title: 'Média salarial', data: "average_salary", render: function (data, type, row) {
+	            { title: 'Média salarial', data: 'average_salary', render: function (data, type, row) {
 					if(type == 'display') {
 						var formatter = new Intl.NumberFormat('pt-BR', {
 							style: 'currency',
@@ -100,7 +96,7 @@ $(document).ready(function() {
 						return data;
 					}
 	            }},
-	            { title: 'Risco', data: "score", render: function (data, type, row) {
+	            { title: 'Risco', data: 'score', render: function (data, type, row) {
 					if(type == 'display') {
 						var text = 'Exposição à doenças: ' + row.exposed_to_disease_or_infections;
 		            	text += '<br />Proximidade física: ' + row.physical_proximity;
@@ -112,41 +108,41 @@ $(document).ready(function() {
 					}
 	            }}
 	        ],
-	        "columnDefs": [
+	        'columnDefs': [
 				{ 'width': '80px', 'targets': 4 }
 			],
-	        order: [[ 4, "desc" ]],
-	        "language": {
-			    "sEmptyTable": "Nenhum registro encontrado",
-			    "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-			    "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-			    "sInfoFiltered": "(Filtrados de _MAX_ registros)",
-			    "sInfoPostFix": "",
-			    "sInfoThousands": ".",
-			    "sLengthMenu": "_MENU_ resultados por página",
-			    "sLoadingRecords": "Carregando...",
-			    "sProcessing": "Processando...",
-			    "sZeroRecords": "Nenhum registro encontrado",
-			    "sSearch": "Pesquisar",
-			    "oPaginate": {
-			        "sNext": "Próximo",
-			        "sPrevious": "Anterior",
-			        "sFirst": "Primeiro",
-			        "sLast": "Último"
+	        order: [[ 4, 'desc']],
+	        'language': {
+			    'sEmptyTable': 'Nenhum registro encontrado',
+			    'sInfo': 'Mostrando de _START_ até _END_ de _TOTAL_ registros',
+			    'sInfoEmpty': 'Mostrando 0 até 0 de 0 registros',
+			    'sInfoFiltered': '(Filtrados de _MAX_ registros)',
+			    'sInfoPostFix': '',
+			    'sInfoThousands': '.',
+			    'sLengthMenu': '_MENU_ resultados por página',
+			    'sLoadingRecords': 'Carregando...',
+			    'sProcessing': 'Processando...',
+			    'sZeroRecords': 'Nenhum registro encontrado',
+			    'sSearch': 'Pesquisar',
+			    'oPaginate': {
+			        'sNext': 'Próximo',
+			        'sPrevious': 'Anterior',
+			        'sFirst': 'Primeiro',
+			        'sLast': 'Último'
 			    },
-			    "oAria": {
-			        "sSortAscending": ": Ordenar colunas de forma ascendente",
-			        "sSortDescending": ": Ordenar colunas de forma descendente"
+			    'oAria': {
+			        'sSortAscending': ': Ordenar colunas de forma ascendente',
+			        'sSortDescending': ': Ordenar colunas de forma descendente'
 			    },
-			    "select": {
-			        "rows": {
-			            "_": "Selecionado %d linhas",
-			            "0": "Nenhuma linha selecionada",
-			            "1": "Selecionado 1 linha"
+			    'select': {
+			        'rows': {
+			            '_': 'Selecionado %d linhas',
+			            '0': 'Nenhuma linha selecionada',
+			            '1': 'Selecionado 1 linha'
 			        }
 			    },
-			    "thousands": ".",
-			    "decimal": ","
+			    'thousands': '.',
+			    'decimal': ','
 			}
 		});
 
@@ -181,8 +177,8 @@ $(document).ready(function() {
 		    datatable.draw();
 		});
 
-		// Update infertace after legent hit
-		chart.legend.itemContainers.template.events.on("hit", function(ev) {
+		// Update infertace after legend hit
+		chart.legend.itemContainers.template.events.on('hit', function(ev) {
 			var sliderValues = slider.noUiSlider.get();
 			var unavailableSeries = [];	
 			chart.series.each(function(series) {
@@ -230,32 +226,32 @@ function addChartSeries(chart, dataset) {
 
 function createChartSeries(chart, name, color, data) {
 	var series = chart.series.push(new am4charts.LineSeries());
-	series.dataFields.valueY = "exposed_to_disease_or_infections";
-	series.dataFields.valueX = "physical_proximity";
-	series.dataFields.value = "employment";
+	series.dataFields.valueY = 'exposed_to_disease_or_infections';
+	series.dataFields.valueX = 'physical_proximity';
+	series.dataFields.value = 'employment';
 	series.strokeOpacity = 0;
 	series.name = name;
 	series.data = data;
 	series.fill = am4core.color(color);
-	series.tooltip.pointerOrientation = "down";
+	series.tooltip.pointerOrientation = 'down';
 
 	var bullet = series.bullets.push(new am4core.Circle());
-	bullet.fill = am4core.color("#e53935");
+	bullet.fill = am4core.color('#e53935');
 	bullet.propertyFields.fill = "group_color";
 	bullet.fillOpacity = 0.4;
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
 	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}";
-	bullet.showTooltipOn = "hit";
-	bullet.propertyFields.stroke = "group_color";
+	bullet.showTooltipOn = 'hit';
+	bullet.propertyFields.stroke = 'group_color';
 
-	var hoverState = bullet.states.create("hover");
+	var hoverState = bullet.states.create('hover');
 	hoverState.properties.fillOpacity = 0.6;
 	hoverState.properties.strokeOpacity = 0.7;
 
-	series.heatRules.push({ target: bullet, min: 5, max: 30, property: "radius" });
-	bullet.adapter.add("tooltipY", function (tooltipY, target) {
+	series.heatRules.push({ target: bullet, min: 5, max: 30, property: 'radius' });
+	bullet.adapter.add('tooltipY', function (tooltipY, target) {
 	    return -target.radius;
 	});
 }
