@@ -124,7 +124,7 @@ $(document).ready(function() {
 			var html = '<b>' + feature.getProperty('title') +' (' + feature.getProperty('state') + ')</b>';
 			html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_total'));
 			html += '<br />Trabalhadores em risco: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_risk'));
-			html += '<br />Risco de impacto: ' + new Intl.NumberFormat('pt-BR', { style: 'percent' }).format(feature.getProperty('value'));
+			html += '<br />Risco de impacto: ' + Number(feature.getProperty('value') * 100).toFixed(2) + '%';
 			infowindow.setContent(html);
 			infowindow.setPosition(event.latLng);
 			infowindow.setOptions({ pixelOffset: new google.maps.Size(0,-34) });
