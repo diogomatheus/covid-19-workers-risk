@@ -4,6 +4,20 @@ body {
 	flex-direction: column;
 }
 
+#loading {
+	display: block;
+	position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+	background: rgba(255, 255, 255, .7) 
+                url('image/loading.gif') 
+                50% 50% 
+                no-repeat;
+}
+
 .header {
     color: #455a64;
     font-weight: 300;

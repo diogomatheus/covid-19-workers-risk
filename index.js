@@ -15,6 +15,9 @@ $(document).ready(function() {
 		chart.legend = new am4charts.Legend();
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
+	    chart.events.on('ready', function() {
+			$('#loading').hide();
+		});
 
 	    // Y and X configuration
 		var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());

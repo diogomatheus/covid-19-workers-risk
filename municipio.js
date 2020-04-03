@@ -11,6 +11,9 @@ $(document).ready(function() {
 		chart.geodata = am4geodata_BrazilStates;
 		chart.exporting.menu = new am4core.ExportMenu();
 		chart.zoomControl = new am4maps.ZoomControl();
+		chart.events.on('ready', function() {
+			$('#loading').hide();
+		});
 
 		// Home button
 		var homeButton = new am4core.Button();
