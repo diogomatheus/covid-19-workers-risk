@@ -14,6 +14,7 @@ $(document).ready(function() {
 			zoom: 4,
 			minZoom: 4,
 			mapTypeControl: false,
+			streetViewControl: false,
 			styles: [
 				{
 					elementType: 'geometry.fill',
@@ -34,62 +35,67 @@ $(document).ready(function() {
 				{
 					featureType: 'administrative.land_parcel',
 					elementType: 'labels.text.fill',
-					stylers: [{color: '#bdbdbd'}]
+					stylers: [{visibility: 'off'}]
+				},
+				{
+					featureType: 'administrative.locality',
+					elementType: 'labels',
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'poi',
 					elementType: 'geometry',
-					stylers: [{color: '#eeeeee'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'poi',
 					elementType: 'labels.text.fill',
-					stylers: [{color: '#757575'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'poi.park',
 					elementType: 'geometry',
-					stylers: [{color: '#e5e5e5'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'poi.park',
 					elementType: 'labels.text.fill',
-					stylers: [{color: '#9e9e9e'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'road',
 					elementType: 'geometry',
-					stylers: [{color: '#ffffff'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'road.arterial',
 					elementType: 'labels.text.fill',
-					stylers: [{color: '#757575'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'road.highway',
 					elementType: 'geometry',
-					stylers: [{color: '#dadada'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'road.highway',
 					elementType: 'labels.text.fill',
-					stylers: [{color: '#616161'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'road.local',
 					elementType: 'labels.text.fill',
-					stylers: [{color: '#9e9e9e'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'transit.line',
 					elementType: 'geometry',
-					stylers: [{color: '#e5e5e5'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'transit.station',
 					elementType: 'geometry',
-					stylers: [{color: '#eeeeee'}]
+					stylers: [{visibility: 'off'}]
 				},
 				{
 					featureType: 'water',
@@ -127,6 +133,9 @@ $(document).ready(function() {
 		map.addListener('tilesloaded', function() {
 			$('#loading').hide();
 		});
+		/*var legend = document.createElement('div');
+		legend.innerHTML = '<img src="image/loading.gif">';
+		map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);*/
 
 		// Datatable configuration
 		var datatable = $('#datatable').DataTable({
