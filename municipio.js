@@ -1,90 +1,42 @@
+var map;
+var infowindow = new google.maps.InfoWindow();
+
 $(document).ready(function() {
 	
 	// Sidenav configuration
 	$('.sidenav').sidenav();
 
+	// Load the geojson
 	$.getJSON('data/municipio-dataset.geojson', function(data) {
-		// Map chart
-		am4core.useTheme(am4themes_frozen);
-		var chart = am4core.create('chart-map', am4maps.MapChart);
-		chart.projection = new am4maps.projections.Mercator();
-		chart.geodata = am4geodata_BrazilStates;
-		chart.zoomControl = new am4maps.ZoomControl();
-		chart.events.on('ready', function() {
+		// Google maps configuration
+		map = new google.maps.Map(document.getElementById('chart-map'), {
+			center: { lat: -14.726084296948184, lng: -55.21875 },
+			zoom: 4,
+			minZoom: 4
+		});
+		map.data.addGeoJson(data);
+	  	map.data.setStyle(function(feature) {
+			return {
+				fillColor: feature.getProperty('color'),
+				strokeColor: feature.getProperty('color'),
+				strokeOpacity: 0.5,
+				strokeWeight: 0.5
+			}
+		});
+		map.data.addListener('click', function(event) {
+			var feature = event.feature;
+			var html = '<b>' + feature.getProperty('title') +' (' + feature.getProperty('state') + ')</b>';
+			html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_total'));
+			html += '<br />Trabalhadores em risco: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_risk'));
+			html += '<br />Risco de impacto: ' + new Intl.NumberFormat('pt-BR', { style: 'percent' }).format(feature.getProperty('value'));
+			infowindow.setContent(html);
+			infowindow.setPosition(event.latLng);
+			infowindow.setOptions({ pixelOffset: new google.maps.Size(0,-34) });
+			infowindow.open(map);
+		});
+		map.addListener('tilesloaded', function() {
 			$('#loading').hide();
 		});
-
-		// Home button
-		var homeButton = new am4core.Button();
-		homeButton.icon = new am4core.Sprite();
-		homeButton.padding(7, 5, 7, 5);
-		homeButton.width = 30;
-		homeButton.icon.path = 'M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8';
-		homeButton.marginBottom = 10;
-		homeButton.parent = chart.zoomControl;
-		homeButton.insertBefore(chart.zoomControl.plusButton);
-		homeButton.events.on('hit', function() {
-			chart.goHome();
-		});
-
-		// Center brazil
-		chart.homeZoomLevel = 0;
-		chart.homeGeoPoint = { longitude: -48.69140625, latitude: -13.496472765758952 };
-
-		// Brazil map
-		var brazilSeries = chart.series.push(new am4maps.MapPolygonSeries());
-		brazilSeries.name = 'Brazil';
-		brazilSeries.useGeodata = true;
-		brazilSeries.exclude = data;
-		brazilSeries.fillOpacity = 0.8;
-		brazilSeries.hiddenInLegend = true;
-		brazilSeries.mapPolygons.template.nonScalingStroke = true;
-
-		// Create map polygon series
-		var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-		polygonSeries.heatRules.push({
-			property: 'fill',
-			target: polygonSeries.mapPolygons.template,
-			min: chart.colors.getIndex(1).brighten(1),
-			max: chart.colors.getIndex(1).brighten(-0.3)
-		});
-
-		// Make map load polygon data from GeoJSON
-		polygonSeries.useGeodata = true;
-		polygonSeries.geodata = data;
-
-		// Set up heat legend
-		let heatLegend = chart.createChild(am4maps.HeatLegend);
-		heatLegend.series = polygonSeries;
-		heatLegend.valign = 'top';
-		heatLegend.align = 'right';
-		heatLegend.width = am4core.percent(25);
-		heatLegend.marginRight = am4core.percent(4);
-		heatLegend.minValue = 0;
-		heatLegend.maxValue = 1;
-
-		// Set up custom heat map legend labels using axis ranges
-		var minRange = heatLegend.valueAxis.axisRanges.create();
-		minRange.value = heatLegend.minValue;
-		minRange.label.text = 'Risco baixo';
-		var maxRange = heatLegend.valueAxis.axisRanges.create();
-		maxRange.value = heatLegend.maxValue;
-		maxRange.label.text = 'Risco alto';
-
-		// Blank out internal heat legend value axis labels
-		heatLegend.valueAxis.renderer.labels.template.adapter.add('text', function(labelText) {
-			return '';
-		});
-
-		// Configure series tooltip
-		var polygonTemplate = polygonSeries.mapPolygons.template;
-		polygonTemplate.tooltipText = "[bold]{title} ({state}):[/]\nTrabalhadores: {workers_total.formatNumber('#,###.')}\nTrabalhadores em risco: {workers_risk.formatNumber('#,###.')}\nRisco de impacto: {value.formatNumber('#.##%')}";
-		polygonTemplate.nonScalingStroke = true;
-		polygonTemplate.strokeWidth = 0.5;
-
-		// Create hover state and set alternative fill color
-		var hs = polygonTemplate.states.create('hover');
-		hs.properties.fill = chart.colors.getIndex(1).brighten(-0.5);
 
 		// Datatable configuration
 		var datatable = $('#datatable').DataTable({
@@ -159,6 +111,7 @@ $(document).ready(function() {
 			    'decimal': ','
 			}
 		});
+		
 	});
 
 });
