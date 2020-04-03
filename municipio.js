@@ -133,9 +133,10 @@ $(document).ready(function() {
 		map.addListener('tilesloaded', function() {
 			$('#loading').hide();
 		});
-		/*var legend = document.createElement('div');
-		legend.innerHTML = '<img src="image/loading.gif">';
-		map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);*/
+		var legend = document.createElement('div');
+		legend.id = 'chart-map-legend';
+		legend.innerHTML = '+ Risco <img src="image/chart-map-legend.jpeg" class="responsive-img"> - Risco';
+		map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
 		// Datatable configuration
 		var datatable = $('#datatable').DataTable({

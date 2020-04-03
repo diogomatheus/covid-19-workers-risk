@@ -59,6 +59,25 @@ main {
 	height: 500px
 }
 
+#chart-map-legend {
+	width: 55px;
+	padding: 5px;
+	left: 10px !important;
+	bottom: 30px !important;
+	background-color: #fff;
+	border: 1px solid #eee;
+	text-align: center;
+	font-size: 12px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#chart-map-legend img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 #datatable_length {
 	display: none;
 }
