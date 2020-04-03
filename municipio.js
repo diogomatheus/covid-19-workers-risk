@@ -8,7 +8,7 @@ $(document).ready(function() {
 		am4core.useTheme(am4themes_frozen);
 		var chart = am4core.create('chart-map', am4maps.MapChart);
 		chart.projection = new am4maps.projections.Mercator();
-		chart.geodata = am4geodata_BrazilHigh;
+		chart.geodata = am4geodata_BrazilUltra;
 		chart.exporting.menu = new am4core.ExportMenu();
 		chart.zoomControl = new am4maps.ZoomControl();
 
