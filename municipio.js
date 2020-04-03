@@ -9,7 +9,6 @@ $(document).ready(function() {
 		var chart = am4core.create('chart-map', am4maps.MapChart);
 		chart.projection = new am4maps.projections.Mercator();
 		chart.geodata = am4geodata_BrazilStates;
-		chart.exporting.menu = new am4core.ExportMenu();
 		chart.zoomControl = new am4maps.ZoomControl();
 		chart.events.on('ready', function() {
 			$('#loading').hide();
@@ -57,12 +56,12 @@ $(document).ready(function() {
 		// Set up heat legend
 		let heatLegend = chart.createChild(am4maps.HeatLegend);
 		heatLegend.series = polygonSeries;
+		heatLegend.valign = 'top';
 		heatLegend.align = 'right';
 		heatLegend.width = am4core.percent(25);
 		heatLegend.marginRight = am4core.percent(4);
 		heatLegend.minValue = 0;
 		heatLegend.maxValue = 1;
-		heatLegend.valign = 'bottom';
 
 		// Set up custom heat map legend labels using axis ranges
 		var minRange = heatLegend.valueAxis.axisRanges.create();
