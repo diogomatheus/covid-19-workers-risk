@@ -86,6 +86,25 @@ main {
 	font-size: 12px;
 }
 
+.logo-laboratorio-futuro {
+	max-width: 150px;
+}
+
+.logo-labore {
+	max-width: 160px;
+	margin-left: 10px;
+}
+
+.logo-ufrj {
+	max-width: 120px;
+	margin-left: 10px;
+}
+
+.logo-coppe {
+	max-width: 140px;
+	margin-left: 10px;
+}
+
 @media screen and (max-width:992px) and (min-width:600px) {
 
 	#datatable>thead>tr>th {
