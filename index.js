@@ -59,8 +59,8 @@ $(document).ready(function() {
 			},
 			step: 1,
 	    	format: {
-		        to: function (value) { return value + '%'; },
-		        from: function (value) { return Number(value.replace('%', '')); }
+		        to: function (value) { return value + ' pts'; },
+		        from: function (value) { return Number(value.replace(' pts', '')); }
 		    }
 		});
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
 		            	text += '<br />Proximidade física: ' + row.physical_proximity;
 		            	text += '<br />Contato com outras pessoas: ' + row.contact_with_others;
 		            	var tooltip = ' <i class="material-icons tiny tooltipped" data-tooltip="' + text + '">info_outline</i>';
-		                return Number(data).toFixed(2) + '%' + tooltip;
+		                return Number(data).toFixed(2).replace('.', ',') + ' pts' + tooltip;
 					} else {
 						return data;
 					}
@@ -245,7 +245,7 @@ function createChartSeries(chart, name, color, data) {
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}";
+	bullet.tooltipText = "[bold]{title}:[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}\nRisco: {score.formatNumber('##.00')} pts";
 	bullet.showTooltipOn = 'hit';
 	bullet.propertyFields.stroke = 'group_color';
 

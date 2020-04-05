@@ -124,7 +124,7 @@ $(document).ready(function() {
 			var html = '<b>' + feature.getProperty('title') +' (' + feature.getProperty('state') + ')</b>';
 			html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_total'));
 			html += '<br />Trabalhadores em risco: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_risk'));
-			html += '<br />Risco: ' + Number(feature.getProperty('value') * 100).toFixed(2) + '%';
+			html += '<br />Risco: ' + Number(feature.getProperty('value') * 100).toFixed(2).replace('.', ',') + '%';
 			infowindow.setContent(html);
 			infowindow.setPosition(event.latLng);
 			infowindow.setOptions({ pixelOffset: new google.maps.Size(0,-34) });
@@ -168,7 +168,7 @@ $(document).ready(function() {
 	            }},
 	            { title: 'Risco', data: 'properties.value', render: function (data, type, row) {
 					if(type == 'display') {
-						return Number(data * 100).toFixed(2) + '%';
+						return Number(data * 100).toFixed(2).replace('.', ',') + '%';
 					} else {
 						return data;
 					}
