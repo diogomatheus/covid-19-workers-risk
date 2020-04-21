@@ -43,7 +43,7 @@ function configureMap(data) {
 		map_type = $('#chart-map-type').val();
 		map.data.forEach(function(feature) { map.data.remove(feature); });
 		map.data.addGeoJson(dataset);
-		var order_column = (map_type === 'Risco de Impacto') ? 4 : 3;
+		var order_column = (map_type === 'Risco de Impacto') ? 6 : 3;
 		datatable.order( [ order_column, 'desc' ] ).draw();
     });
 
@@ -64,6 +64,8 @@ function configureMap(data) {
 		var html = '<strong>' + feature.getProperty('title') +' (' + feature.getProperty('state') + ')</strong>';
 		html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_total'));
 		html += '<br />Trabalhadores em risco: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_risk'));
+		html += '<br />PIB: ' + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(feature.getProperty('pib'));
+		html += '<br />IDHM: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal', minimumFractionDigits: 3 }).format(feature.getProperty('idhm'));
 		html += '<br />Impacto: ' + Number(feature.getProperty('value') * 100).toFixed(2).replace('.', ',') + '%';
 		infowindow.setContent(html);
 		infowindow.setPosition(event.latLng);
@@ -215,6 +217,26 @@ function configureDatatable(data) {
 					return data;
 				}
 			}},
+			{ title: 'PIB', data: 'properties.pib', render: function (data, type, row) {
+				if(type == 'display') {
+					var formatter = new Intl.NumberFormat('pt-BR', {
+						style: 'currency', currency: 'BRL'
+					});
+					return formatter.format(data);
+				} else {
+					return data;
+				}
+			}},
+			{ title: 'IDHM', data: 'properties.idhm', render: function (data, type, row) {
+				if(type == 'display') {
+					var formatter = new Intl.NumberFormat('pt-BR', {
+						style: 'decimal', minimumFractionDigits: 3
+					});
+					return formatter.format(data);
+				} else {
+					return data;
+				}
+			}},
 			{ title: 'Impacto', data: 'properties.value', render: function (data, type, row) {
 				if(type == 'display') {
 					return Number(data * 100).toFixed(2).replace('.', ',') + '%';
@@ -224,9 +246,9 @@ function configureDatatable(data) {
 			}}
 		],
 		'columnDefs': [
-			{ 'width': '80px', 'targets': 4 }
+			{ 'width': '80px', 'targets': 6 }
 		],
-		order: [[ 4, 'desc' ]],
+		order: [[ 6, 'desc' ]],
 		'language': {
 			'sEmptyTable': 'Nenhum registro encontrado',
 			'sInfo': 'Mostrando de _START_ até _END_ de _TOTAL_ registros',
