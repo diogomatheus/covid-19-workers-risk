@@ -17,7 +17,7 @@ $(document).ready(function() {
 		chart.legend = new am4charts.Legend();
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
-		chart.data = data[region].reverse();
+		chart.data = data[region];
 		chart.events.on('ready', function() {
 			$('#loading').hide();
 		});
@@ -55,7 +55,7 @@ $(document).ready(function() {
 
 		$('#region').on('change', function () {
 			region = $('#region').val();
-			chart.data = data[region].reverse();
+			chart.data = data[region];
 		});
 	});
 
