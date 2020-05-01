@@ -10,12 +10,12 @@
             gtag('config', 'UA-156894371-3');
         </script>
 
-        <title>Risco de Contágio por Ocupação no Brasil - Impacto COVID-19 (coronavírus)</title>
+        <title>Repercussão na Mídia - Impacto COVID-19 (coronavírus)</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="Análise de risco de contágio por ocupação considerando diferente características (e.g., exposição à doenças, proximidade física) relacionadas aos empregos formais com base no cruzamento dos dados de ocupação do Brasil e EUA.">
-        <meta name="keywords" content="covid-19, coronavírus, análise, risco, contágio, ocupação, emprego formal, exposição à doenças, proximidade física, contato com outras pessoas, Brasil, EUA, Estados Unidos">
+        <meta name="description" content="Repercussão na mídia do projeto Impacto COVID-19.">
+        <meta name="keywords" content="covid-19, coronavírus, análise, risco, contágio, município, emprego formal, exposição à doenças, proximidade física, contato com outras pessoas, Brasil, EUA, Estados Unidos">
         <meta name="robots" content="all" />
 
         <link rel="shortcut icon" href="image/favicon.png" type="image/ico"/>
@@ -27,10 +27,6 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize plugin-->
         <link type="text/css" rel="stylesheet" href="plugins/materialize/css/materialize.min.css" media="screen,projection"/>
-        <!--Import noUiSlider plugin-->
-        <link type="text/css" rel="stylesheet" href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" />
-        <!--Import DataTables plugin-->
-        <link rel="stylesheet" type="text/css" href="plugins/DataTables/datatables.min.css"/>
         <!--Import application style-->
         <link type="text/css" rel="stylesheet" href="css/application.css" rel="stylesheet" />
 
@@ -41,14 +37,13 @@
         <![endif]-->
     </head>
     <body>
-        <div id="loading"></div>
         <header>
             <nav class="top-nav">
                 <div class="container">
                     <div class="nav-wrapper">
                         <div class="row">
                             <div class="col s12 m10 offset-m1">
-                                <h1 class="header grey-text text-darken-3">Risco por Ocupação</h1>
+                                <h1 class="header grey-text text-darken-3">Repercussão na Mídia</h1>
                             </div>
                         </div>
                     </div>
@@ -61,7 +56,7 @@
             </div>
             <ul id="nav-mobile" class="sidenav sidenav-fixed">
                 <li class="logo">Impacto COVID-19 (coronavírus)</li>
-                <li class="bold active">
+                <li class="bold">
                     <a href="/" class="waves-effect waves-teal">Risco por Ocupação</a>
                 </li>
                 <li class="bold">
@@ -70,7 +65,7 @@
                 <li class="bold">
                     <a href="/termometro-quarentena.html" class="waves-effect waves-teal">Termômetro da Quarentena</a>
                 </li>
-                <li class="bold">
+                <li class="bold active">
                     <a href="/repercussao-midia.html" class="waves-effect waves-teal">Repercussão na Mídia</a>
                 </li>
                 <li class="bold">
@@ -82,24 +77,56 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12">
-                        <br />
-                        <div class="center-container">
-                            <p>Nível do risco de contágio:</p>
-                            <div id="slider"></div>
+                        <div class="collection">
+                            <a href="https://oglobo.globo.com/sociedade/coronavirus/estudo-identifica-os-18-milhoes-de-trabalhadores-brasileiros-mais-suscetiveis-ao-coronavirus-24351508" class="collection-item">
+                                <strong>O Globo</strong> – Estudo identifica os 18 milhões de trabalhadores brasileiros mais suscetíveis ao coronavírus
+                            </a>
+                            <a href="https://economia.estadao.com.br/noticias/geral,pandemia-vai-mudar-dinamica-do-mercado-de-trabalho-e-acelerar-automacao-dizem-pesquisadores,70003270503" class="collection-item">
+                                <strong>Estado de S. Paulo</strong> – Pandemia vai mudar dinâmica do mercado de trabalho
+                            </a>
+                            <a href="https://valor.globo.com/brasil/noticia/2020/04/08/estudo-ve-26-milhoes-de-profissionais-de-saude-com-risco-de-contagio-acima-de-50percent.ghtml" class="collection-item">
+                                <strong>Valor Econômico</strong> – Estudo vê 2,6 milhões de profissionais de saúde com risco de contágio acima de 50%
+                            </a>
+                            <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2020-04/coronavirus-pesquisadores-mostram-profissoes-com-risco-de-contagio?amp" class="collection-item">
+                                <strong>AgênciaBrasil</strong> – Coronavírus: pesquisadores mostram profissões com risco de contágio
+                            </a>
+                            <a href="https://www.cnnbrasil.com.br/saude/2020/04/07/profissoes-mais-expostas-a-covid-19" class="collection-item">
+                                <strong>CNN</strong> – Pesquisa mostra quais profissões estão mais expostas ao novo coronavírus
+                            </a>
+                            <a href="http://tvsorocaba.com.br/dentistas-sao-os-profissionais-com-maior-risco-de-contaminacao-pela-covid-19-aponta-pesquisa/" class="collection-item">
+                                <strong>TV Sorocaba/SBT</strong> – Dentistas são os profissionais com maior risco de contaminação pela covid-19, aponta pesquisa
+                            </a>
+                            <a href="https://economia.uol.com.br/noticias/redacao/2020/04/07/pesquisa-mapeia-profissoes-com-maior-risco-de-contagio-de-coronavirus.htm" class="collection-item">
+                                <strong>UOL Economia</strong> – Pesquisa mapeia profissões com maior risco de contágio de coronavírus
+                            </a>
+                            <a href="https://drive.google.com/open?id=19eP-_yMPoo3OCofrTbUlbdbnTNBVlCxh" class="collection-item">
+                                <strong>Extra</strong> – Dezoito milhões de brasileiros em risco
+                            </a>
+                            <a href="https://drive.google.com/open?id=19eP-_yMPoo3OCofrTbUlbdbnTNBVlCxh" class="collection-item">
+                                <strong>Metrópolis</strong> – Saiba as profissões que correm mais risco de contrair coronavírus
+                            </a>
+                            <a href="https://economia.ig.com.br/2020-04-05/covid-19-cozinheiros-e-vendedores-estao-entre-profissoes-que-mais-correm-risco.html" class="collection-item">
+                                <strong>Brasil Econômico</strong> – Covid-19: Cozinheiros e vendedores estão entre profissões que mais correm risco
+                            </a>
+                            <a href="https://jc.ne10.uol.com.br/colunas/jc-negocios/2020/04/5605001-realidade-das-mortes-vai-impor-isolamento-social.html" class="collection-item">
+                                <strong>Jornal do Commercio</strong> – Realidade das mortes vai fortalecer isolamento social
+                            </a>
+                            <a href="https://coppe.ufrj.br/pt-br/planeta-coppe-noticias/noticias/pesquisadores-da-coppe-mapeiam-atividades-profissionais-mais" class="collection-item">
+                                <strong>Planeta COPPE Notícias</strong> – Pesquisadores da Coppe mapeiam atividades profissionais mais ameaçadas pelo Covid-19
+                            </a>
+                            <a href="https://projetocolabora.com.br/ods4/coronavirus-ufrj-mapeia-atividades-profissionais-mais-ameacadas/" class="collection-item">
+                                <strong>Projeto Colabora</strong> – Coronavírus: UFRJ mapeia atividades profissionais mais ameaçadas
+                            </a>
+                            <a href="http://bemparana.com.br/noticia/em-curitiba-353.670-trabalhadores-tem-indice-de-risco-de-contaminacao-superior-a-50#.XpC-68hKirw" class="collection-item">
+                                <strong>Bem Paraná</strong> – Em Curitiba, 353.670 trabalhadores têm índice de risco de contaminação superior a 50%
+                            </a>
+                            <a href="https://eurio.com.br/noticia/13015/coppe-mapeia-risco-de-contagio-da-covid-19-por-profissao-e-ameacas-a-empregos.html" class="collection-item">
+                                <strong>Eu, Rio!</strong> – Coppe mapeia risco de contágio da Covid-19, por profissão, e ameaças a empregos
+                            </a>
+                            <a href="https://paraibaja.com.br/medicos-comerciantes-e-professores-pesquisa-mapeia-profissoes-com-maior-risco-de-contagio-de-coronavirus/" class="collection-item">
+                                <strong>Paraíba Já</strong> – Médicos, comerciantes e professores: pesquisa mapeia profissões com maior risco de contágio de coronavírus
+                            </a>
                         </div>
-                        <br />
-                        <div id="chart-bubble"></div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <table id="datatable" class="display responsive-table" width="100%"></table>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="research-notes" class="col s12">
-                        <p>Fonte: <a href="https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html">The Workers Who Face the Greatest Coronavirus Risk</a> - Lazaro Gamio (New York Times), <a href="http://trabalho.gov.br/rais">Relação Anual de Informações Sociais</a> (RAIS), <a href="http://www.mtecbo.gov.br/cbosite/pages/informacoesGerais.jsf">Classificação Brasileira de Ocupações</a> (CBO). Dados sobre número de pessoas empregadas e salário médio são da RAIS de dezembro de 2018, a mais recente disponível.</p>
-                        <p>Para mais informações, confira nossa <a href="nota-metodologica/risco-contagio.pdf">Nota Metodológica do Risco de Contágio</a>.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -153,19 +180,7 @@
         <!--Import materialize plugin-->
         <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
 
-        <!--Import nouislider plugin-->
-        <script type="text/javascript" src="plugins/noUiSlider/nouislider.min.js"></script>
-
-        <!--Import amcharts plugin-->
-        <script type="text/javascript" src="plugins/amcharts4/core.js"></script>
-        <script type="text/javascript" src="plugins/amcharts4/charts.js"></script>
-        <script type="text/javascript" src="plugins/amcharts4/themes/frozen.js"></script>
-        <script type="text/javascript" src="plugins/amcharts4/lang/pt_BR.js"></script>
-
-        <!--Import DataTables plugin-->
-        <script type="text/javascript" src="plugins/DataTables/datatables.min.js"></script>
-
-        <!--Import index script-->
-        <script type="text/javascript" src="js/index.js"></script>
+        <!--Import static script-->
+        <script type="text/javascript" src="js/static.js"></script>
     </body>
 </html>

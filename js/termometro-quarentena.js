@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('select').formSelect();
 
 	// Load the geojson
-	$.getJSON('data/mobilidade-dataset.json', function(data) {
+	$.getJSON('dataset/mobilidade-dataset.json', function(data) {
 		am4core.useTheme(am4themes_animated);
 		var chart = am4core.create("chart-date-based", am4charts.XYChart);
 		chart.language.locale = am4lang_pt_BR;

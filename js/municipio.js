@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('.sidenav').sidenav();
 
 	// Load the geojson
-	$.getJSON('data/municipio-dataset.geojson', function(data) {
+	$.getJSON('dataset/municipio-dataset.geojson', function(data) {
 		dataset = data;
 		configureMap(dataset);
 		configureDatatable(dataset);		

@@ -13,7 +13,7 @@ body {
     height: 100%;
     width: 100%;
 	background: rgba(255, 255, 255, .7) 
-                url('image/loading.gif') 
+                url('../image/loading.gif') 
                 50% 50% 
                 no-repeat;
 }
