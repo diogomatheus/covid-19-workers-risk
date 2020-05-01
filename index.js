@@ -236,6 +236,7 @@ function createChartSeries(chart, name, color, data) {
 	series.name = name;
 	series.data = data;
 	series.fill = am4core.color(color);
+	series.stroke = am4core.color(color);
 	series.tooltip.pointerOrientation = 'down';
 
 	var bullet = series.bullets.push(new am4core.Circle());

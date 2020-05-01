@@ -44,7 +44,7 @@ main {
 	flex: 1 0 auto;
 }
 
-#slider-container {
+.center-container {
 	max-width: 90%;
     margin: auto;
 }
@@ -55,6 +55,11 @@ main {
 }
 
 #chart-map {
+	width: 100%;
+	height: 500px
+}
+
+#chart-date-based {
 	width: 100%;
 	height: 500px
 }
