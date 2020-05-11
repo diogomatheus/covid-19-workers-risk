@@ -64,9 +64,10 @@ function configureMap(data) {
 		var html = '<strong>' + feature.getProperty('title') +' (' + feature.getProperty('state') + ')</strong>';
 		html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_total'));
 		html += '<br />Trabalhadores em risco: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_risk'));
+		html += ' (' + Number(feature.getProperty('workers_risk_percentage') * 100).toFixed(2).replace('.', ',') + '%)';
 		html += '<br />PIB: ' + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(feature.getProperty('pib'));
 		html += '<br />IDHM: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal', minimumFractionDigits: 3 }).format(feature.getProperty('idhm'));
-		html += '<br />Impacto: ' + Number(feature.getProperty('value') * 100).toFixed(2).replace('.', ',') + '%';
+		html += '<br />Impacto: ' + Number(feature.getProperty('impact_percentage') * 100).toFixed(2).replace('.', ',') + '%';
 		infowindow.setContent(html);
 		infowindow.setPosition(event.latLng);
 		infowindow.setOptions({ pixelOffset: new google.maps.Size(0,-34) });
@@ -212,7 +213,9 @@ function configureDatatable(data) {
 					var formatter = new Intl.NumberFormat('pt-BR', {
 						style: 'decimal'
 					});
-					return formatter.format(data);
+					var value = formatter.format(data);
+					value += ' (' + Number(row.properties.workers_risk_percentage * 100).toFixed(2).replace('.', ',') + '%)';
+					return value;
 				} else {
 					return data;
 				}
@@ -237,7 +240,7 @@ function configureDatatable(data) {
 					return data;
 				}
 			}},
-			{ title: 'Impacto', data: 'properties.value', render: function (data, type, row) {
+			{ title: 'Impacto', data: 'properties.impact_percentage', render: function (data, type, row) {
 				if(type == 'display') {
 					return Number(data * 100).toFixed(2).replace('.', ',') + '%';
 				} else {
