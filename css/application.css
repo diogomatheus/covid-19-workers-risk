@@ -49,9 +49,14 @@ main {
     margin: auto;
 }
 
-#chart-bubble {
+#chart-bubble-occupations {
 	width: 100%;
 	height: 800px
+}
+
+#chart-bubble-activities {
+	width: 100%;
+	height: 500px
 }
 
 #chart-map {

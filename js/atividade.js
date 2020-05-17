@@ -3,39 +3,43 @@ $(document).ready(function() {
 	// Sidenav configuration
 	$('.sidenav').sidenav();
 
-	$.getJSON('dataset/cbo-dataset.json', function(data) {
+	$.getJSON('dataset/cnae-dataset.json', function(data) {
 		// Bubble chart
 		am4core.useTheme(am4themes_frozen);
-		var chart = am4core.create('chart-bubble-occupations', am4charts.XYChart);
+		var chart = am4core.create('chart-bubble-activities', am4charts.XYChart);
 		chart.language.locale = am4lang_pt_BR;
 		chart.cursor = new am4charts.XYCursor();
 		chart.cursor.behavior = 'zoomXY';
 		chart.scrollbarX = new am4core.Scrollbar();
 		chart.scrollbarY = new am4core.Scrollbar();
+		/*
 		chart.legend = new am4charts.Legend();
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
+	    */
 	    chart.events.on('ready', function() {
 			$('#loading').hide();
 		});
 
 	    // X and Y configuration
 		var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
-		valueAxisX.title.text = 'Proximidade física';
+		valueAxisX.title.text = 'Trabalhadores em risco';
 		valueAxisX.renderer.ticks.template.disabled = true;
 		valueAxisX.renderer.axisFills.template.disabled = true;
 	  	valueAxisX.max = 100;
 	  	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
-		valueAxisY.title.text = 'Exposição à doenças ou infecções';
+		valueAxisY.title.text = 'Risco de impacto';
 		valueAxisY.renderer.ticks.template.disabled = true;
 		valueAxisY.renderer.axisFills.template.disabled = true;
 		valueAxisY.max = 100;
 
 	  	// Marker configuration
+	    /*
 	    var marker = chart.legend.markers.template.children.getIndex(0);
 	    marker.width = 20;
 	    marker.height = 20;
 	    marker.cornerRadius(12, 12, 12, 12);
+	    */
 
 	    // Brazilian data
 		var brazil_data = data;
@@ -59,8 +63,8 @@ $(document).ready(function() {
 			},
 			step: 1,
 	    	format: {
-		        to: function (value) { return value + ' pts'; },
-		        from: function (value) { return Number(value.replace(' pts', '')); }
+		        to: function (value) { return value + '%'; },
+		        from: function (value) { return Number(value.replace('%', '')); }
 		    }
 		});
 
@@ -70,15 +74,8 @@ $(document).ready(function() {
 			paging: true,
 			data: dataset,
 	        columns: [
-	            { title: 'Ocupação', data: 'title', render: function (data, type, row) {
-	            	if(type == 'display') {
-						return data + ' <i class="material-icons tiny tooltipped" data-tooltip="Ocupação SOC: ' + row.soc_title + '">info_outline</i>';
-					} else {
-						return data;
-					}
-	            }},
-	            { title: 'Categoria', data: 'group' },
-	            { title: 'Trabalhadores', data: 'employment', render: function (data, type, row) {
+	            { title: 'Atividade', data: 'name' },
+	            { title: 'Trabalhadores', data: 'workers', render: function (data, type, row) {
 					if(type == 'display') {
 						var formatter = new Intl.NumberFormat('pt-BR', {
 							style: 'decimal'
@@ -87,34 +84,30 @@ $(document).ready(function() {
 					} else {
 						return data;
 					}
-	            }},
-	            { title: 'Média salarial', data: 'average_salary', render: function (data, type, row) {
+				}},
+				{ title: 'Trabalhadores em risco', data: 'workers_risk', render: function (data, type, row) {
 					if(type == 'display') {
 						var formatter = new Intl.NumberFormat('pt-BR', {
-							style: 'currency',
-							currency: 'BRL',
+							style: 'decimal'
 						});
-						return formatter.format(data);
+						var value = formatter.format(data);
+						value += ' (' + Number(row.workers_risk_percentage).toFixed(2).replace('.', ',') + '%)';
+						return value;
 					} else {
 						return data;
 					}
-	            }},
-	            { title: 'Risco', data: 'score', render: function (data, type, row) {
-					if(type == 'display') {
-						var text = 'Exposição à doenças: ' + row.exposed_to_disease_or_infections;
-		            	text += '<br />Proximidade física: ' + row.physical_proximity;
-		            	text += '<br />Contato com outras pessoas: ' + row.contact_with_others;
-		            	var tooltip = ' <i class="material-icons tiny tooltipped" data-tooltip="' + text + '">info_outline</i>';
-		                return Number(data).toFixed(2).replace('.', ',') + ' pts' + tooltip;
-					} else {
+				}},
+	            { title: 'Impacto', data: 'score', render: function (data, type, row) {
+					if(type == 'display')
+						return Number(data).toFixed(2).replace('.', ',') + '%';
+					else
 						return data;
-					}
 	            }}
 	        ],
 	        'columnDefs': [
-				{ 'width': '80px', 'targets': 4 }
+				{ 'width': '80px', 'targets': 3 }
 			],
-	        order: [[ 4, 'desc']],
+	        order: [[ 3, 'desc']],
 	        'language': {
 			    'sEmptyTable': 'Nenhum registro encontrado',
 			    'sInfo': 'Mostrando de _START_ até _END_ de _TOTAL_ registros',
@@ -166,7 +159,7 @@ $(document).ready(function() {
 				series.data = brazil_data.filter(function(item) {
 					return item.score >= parseInt(sliderValues[0]) && 
 						   item.score <= parseInt(sliderValues[1]) && 
-						   series.name === item.group;
+						   series.name === 'Default';
 				});
 			});
 
@@ -176,11 +169,12 @@ $(document).ready(function() {
 					   unavailableSeries.indexOf(item.group) === -1;
 			});
 			datatable.clear();
-		    datatable.rows.add(datatable_dataset);
+		    datatable.rows.add(brazil_data);
 		    datatable.draw();
 		});
 
 		// Update infertace after legend hit
+		/*
 		chart.legend.itemContainers.template.events.on('hit', function(ev) {
 			var sliderValues = slider.noUiSlider.get();
 			var unavailableSeries = [];	
@@ -199,6 +193,7 @@ $(document).ready(function() {
 		    datatable.rows.add(dataset);
 		    datatable.draw();
 		});
+		*/
 
 	});
 
@@ -206,32 +201,18 @@ $(document).ready(function() {
 
 function addChartSeries(chart, dataset) {
 	var chartSeries = [
-		{ name: 'Alimentação', color: '#e03a71' },
-		{ name: 'Agropecuária e pesca', color: '#10540a' },
-		{ name: 'Artes, Entretenimento e Mídia', color: '#9e8b75' },
-		{ name: 'Ciências, Engenharia e Computação', color: '#8debe0' },
-		{ name: 'Comércio', color: '#abf051' },
-		{ name: 'Construção e Extração', color: '#8a8a8a' },
-		{ name: 'Educação', color: '#deb147' },
-		{ name: 'Indústria', color: '#314b6b' },
-		{ name: 'Jurídico e Serviço Social', color: '#4acc3b' },
-		{ name: 'Negócios, Finanças e Gestão', color: '#343deb' },
-		{ name: 'Saúde', color: '#e03a3a' },
-		{ name: 'Serviços', color: '#d051f0' },
-		{ name: 'Transportes', color: '#f7b78f' }
+		{ name: 'Default', color: '#e53935' }
 	];
 	chartSeries.forEach(function(series) {
-		createChartSeries(chart, series.name, series.color, dataset.filter(function(item) {
-			return item.group == series.name
-		}));
+		createChartSeries(chart, series.name, series.color, dataset);
 	});
 }
 
 function createChartSeries(chart, name, color, data) {
 	var series = chart.series.push(new am4charts.LineSeries());
-	series.dataFields.valueY = 'exposed_to_disease_or_infections';
-	series.dataFields.valueX = 'physical_proximity';
-	series.dataFields.value = 'employment';
+	series.dataFields.valueX = 'workers_risk_percentage';
+	series.dataFields.valueY = 'score';
+	series.dataFields.value = 'workers';
 	series.strokeOpacity = 0;
 	series.name = name;
 	series.data = data;
@@ -241,14 +222,14 @@ function createChartSeries(chart, name, color, data) {
 
 	var bullet = series.bullets.push(new am4core.Circle());
 	bullet.fill = am4core.color('#e53935');
-	bullet.propertyFields.fill = "group_color";
+	// bullet.propertyFields.fill = "group_color";
 	bullet.fillOpacity = 0.4;
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}[/]\nCategoria: {group}\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}\nRisco: {score.formatNumber('##.00')} pts";
+	bullet.tooltipText = "[bold]{name}[/]\nTrabalhadores: {workers.formatNumber('#,###.')}\nTrabalhadores em risco: {workers_risk.formatNumber('#,###.')} ({workers_risk_percentage.formatNumber('##.00')}%)\nImpacto: {score.formatNumber('##.00')}%";
 	bullet.showTooltipOn = 'hit';
-	bullet.propertyFields.stroke = 'group_color';
+	// bullet.propertyFields.stroke = 'group_color';
 
 	var hoverState = bullet.states.create('hover');
 	hoverState.properties.fillOpacity = 0.6;

@@ -1,0 +1,671 @@
+name,workers,workers_risk,workers_risk_percentage,score
+Cultivo de cereais,67173,3885,5.783573757313206,34.70971471672648
+Cultivo de algodão herbáceo e de outras fibras de lavoura temporária,11711,847,7.232516437537358,39.83662084080494
+Cultivo de cana-de-açúcar,125521,5595,4.457421467324193,34.817281570414515
+Cultivo de fumo,2125,63,2.9647058823529413,30.475450980392164
+Cultivo de soja,139312,9676,6.945561042839095,37.70895304544234
+"Cultivo de oleaginosas de lavoura temporária, exceto soja",3880,209,5.38659793814433,34.668556701030944
+Cultivo de plantas de lavoura temporária não especificadas anteriormente,54704,2196,4.014331675928634,31.340486984498405
+Horticultura,29698,1498,5.044110714526231,33.267941724470774
+Cultivo de flores e plantas ornamentais,18723,878,4.689419430646798,28.69958518043761
+Cultivo de laranja,56530,1679,2.970104369361401,29.124523851642188
+Cultivo de uva,23445,678,2.891874600127959,26.814246107912133
+"Cultivo de frutas de lavoura permanente, exceto laranja e uva",69268,3060,4.417624299820985,31.321143962580138
+Cultivo de café,85493,2786,3.258746330108898,29.80537977768162
+Cultivo de cacau,7971,212,2.659641199347635,30.02634550244638
+Cultivo de plantas de lavoura permanente não especificadas anteriormente,23825,955,4.008394543546694,33.85386498775797
+Produção de sementes certificadas,14545,1152,7.920247507734617,39.27746075398189
+"Produção de mudas e outras formas de propagação vegetal, certificadas",4656,296,6.357388316151202,33.308848797250874
+Criação de bovinos,364275,15160,4.161691030128337,39.781134216365786
+Criação de outros animais de grande porte,7976,435,5.453861584754263,45.180667001003
+Criação de caprinos e ovinos,1809,83,4.588170259812051,40.98009950248757
+Criação de suínos,28117,1350,4.801365721805313,50.32817631089139
+Criação de aves,102211,5646,5.523867294126855,52.61834505744655
+Criação de animais não especificados anteriormente,5711,843,14.760987567851513,49.58197630304092
+Atividades de apoio à agricultura,97956,7353,7.506431459022418,35.26046728463121
+Atividades de apoio à pecuária,24037,2343,9.747472646336899,42.05838221630543
+Atividades de pós-colheita,7572,786,10.380348652931854,46.142190526501174
+Caça e serviços relacionados,15,2,13.333333333333334,51.733333333333334
+Produção florestal - florestas plantadas,61204,2983,4.873864453303706,40.587499727686655
+Produção florestal - florestas nativas,5340,414,7.752808988764046,45.93245942571783
+Atividades de apoio à produção florestal,32464,1953,6.0158945293247905,41.50385041892556
+Pesca em água salgada,6205,403,6.494762288477035,42.705613752350246
+Pesca em água doce,600,100,16.666666666666664,48.20055555555554
+Aqüicultura em água salgada e salobra,6569,586,8.92068808037753,49.73532247424773
+Aqüicultura em água doce,6297,500,7.940289026520565,48.95452861150814
+Extração de carvão mineral,3813,228,5.979543666404406,50.0889063729347
+Extração de petróleo e gás natural,23058,1204,5.221615057680632,48.170309653916206
+Extração de minério de ferro,48700,3296,6.767967145790554,47.55549623545518
+Extração de minério de alumínio,3971,230,5.791991941576429,47.86493746327538
+Extração de minério de estanho,1358,122,8.98379970544919,48.08762886597937
+Extração de minério de manganês,948,86,9.071729957805907,47.805203938115355
+Extração de minério de metais preciosos,14550,1065,7.31958762886598,48.25903780068732
+Extração de minerais radioativos,18,2,11.11111111111111,52.129629629629626
+Extração de minerais metálicos não-ferrosos não especificados anteriormente,12349,823,6.664507247550409,48.02102734364458
+"Extração de pedra, areia e argila",58364,6035,10.340278253718045,47.530623900577936
+"Extração de minerais para fabricação de adubos, fertilizantes e outros produtos químicos",4651,395,8.492797247903678,46.082562889701094
+Extração e refino de sal marinho e sal-gema,4902,482,9.832721338229295,49.80307357541139
+Extração de gemas (pedras preciosas e semipreciosas),1357,171,12.601326455416359,48.51535249324489
+Extração de minerais não-metálicos não especificados anteriormente,10277,894,8.699036683857157,47.68340306834031
+Atividades de apoio à extração de petróleo e gás natural,20469,3340,16.31735795593336,50.710489032195014
+"Atividades de apoio à extração de minerais, exceto petróleo e gás natural",3737,444,11.881188118811881,47.63901525287663
+"Abate de reses, exceto suínos",133775,7810,5.838161091384788,49.331830810440444
+"Abate de suínos, aves e outros pequenos animais",284847,13283,4.6632051592609365,49.565094009532615
+Fabricação de produtos de carne,65192,5096,7.816910050312923,47.92573219617948
+Preservação do pescado e fabricação de produtos do pescado,18552,1367,7.36847779215179,46.83802285467874
+Fabricação de conservas de frutas,23460,2434,10.375106564364875,48.58458368854785
+Fabricação de conservas de legumes e outros vegetais,8335,897,10.761847630473905,48.48354329134172
+"Fabricação de sucos de frutas, hortaliças e legumes",19398,2587,13.33642643571502,48.565625322198166
+"Fabricação de óleos vegetais em bruto, exceto óleo de milho",22036,2273,10.314939190415684,46.650178495794805
+"Fabricação de óleos vegetais refinados, exceto óleo de milho",8031,944,11.754451500435811,47.75362138380435
+Fabricação de margarina e outras gorduras vegetais e de óleos não-comestíveis de animais,3964,484,12.209889001009081,50.0369155734948
+Preparação do leite,13463,1746,12.968877664710687,47.25791675951367
+Fabricação de laticínios,80512,8632,10.721383147853736,46.28329938394275
+Fabricação de sorvetes e outros gelados comestíveis,24960,5650,22.63621794871795,50.57568108974358
+Beneficiamento de arroz e fabricação de produtos do arroz,21761,2732,12.554570102476909,47.76744328538817
+Moagem de trigo e fabricação de derivados,22373,2685,12.001072721584052,48.322099554522566
+Fabricação de farinha de mandioca e derivados,4124,406,9.844810863239573,46.29817329453607
+"Fabricação de farinha de milho e derivados, exceto óleos de milho",8337,933,11.1910759265923,48.59641757626644
+Fabricação de amidos e féculas de vegetais e de óleos de milho,8602,820,9.532666821669379,47.73413159730294
+Fabricação de alimentos para animais,55781,7008,12.563417651171546,48.79442223457214
+Moagem e fabricação de produtos de origem vegetal não especificados anteriormente,20949,2232,10.654446512960046,48.102662020462354
+Fabricação de açúcar em bruto,255009,11319,4.438666870581039,37.53065185934612
+Fabricação de açúcar refinado,2017,173,8.57709469509172,39.19847959015042
+Torrefação e moagem de café,17283,2966,17.161372446913152,50.14760168952148
+Fabricação de produtos à base de café,2646,271,10.241874527588815,46.842277651801446
+Fabricação de produtos de panificação,147982,52040,35.16643916151965,53.827035270055376
+Fabricação de biscoitos e bolachas,47190,5386,11.413435049798686,48.15944055944058
+"Fabricação de produtos derivados do cacau, de chocolates e confeitos",35130,2902,8.260745801309422,46.67375462567603
+Fabricação de massas alimentícias,47244,7267,15.381847430361528,49.30815200519289
+"Fabricação de especiarias, molhos, temperos e condimentos",13070,1694,12.960979342004592,48.85988268298897
+Fabricação de alimentos e pratos prontos,12909,3635,28.158649004570456,52.45252666098582
+Fabricação de produtos alimentícios não especificados anteriormente,93587,13204,14.108797161998995,48.697725111393545
+Fabricação de aguardentes e outras bebidas destiladas,9513,1128,11.857458215074109,47.09236483408667
+Fabricação de vinho,5808,841,14.480027548209367,46.646235078053266
+"Fabricação de malte, cervejas e chopes",38082,2755,7.234388950160181,48.53996638831994
+Fabricação de águas envasadas,19610,2283,11.642019377868435,48.62520822709502
+Fabricação de refrigerantes e de outras bebidas não-alcoólicas,45970,5892,12.817054600826626,48.93282575592773
+Processamento industrial do fumo,4030,387,9.602977667493796,47.36344086021503
+Fabricação de produtos do fumo,5434,507,9.330143540669857,50.00944669365723
+Preparação e fiação de fibras de algodão,20305,1106,5.446934252647131,47.43545924649102
+"Preparação e fiação de fibras têxteis naturais, exceto algodão",5796,428,7.38440303657695,47.67592592592594
+Fiação de fibras artificiais e sintéticas,9489,592,6.2388028243229,48.40225524291284
+Fabricação de linhas para costurar e bordar,5200,325,6.25,48.071858974358996
+Tecelagem de fios de algodão,26027,1440,5.532716025665655,47.31891241147012
+"Tecelagem de fios de fibras têxteis naturais, exceto algodão",2325,160,6.881720430107527,46.95125448028673
+Tecelagem de fios de fibras artificiais e sintéticas,15662,978,6.244413229472609,45.541650704465155
+Fabricação de tecidos de malha,24007,2153,8.968217603199067,45.90770747420891
+"Acabamentos em fios, tecidos e artefatos têxteis",36474,2457,6.73630531337391,47.30575204255086
+Fabricação de artefatos têxteis para uso doméstico,41559,3922,9.43718568781732,47.023484684424496
+Fabricação de artefatos de tapeçaria,6307,577,9.148565086411924,46.12462343427933
+Fabricação de artefatos de cordoaria,3341,332,9.937144567494762,48.14207323156738
+"Fabricação de tecidos especiais, inclusive artefatos",12976,1348,10.388409371146732,47.02689580764491
+Fabricação de outros produtos têxteis não especificados anteriormente,42578,3117,7.320682042369299,46.17293751076456
+Confecção de roupas íntimas,70598,6258,8.864273775461061,46.104889656930744
+"Confecção de peças do vestuário, exceto roupas íntimas",413632,40549,9.803158362989324,46.302421798442374
+Confecção de roupas profissionais,22428,2784,12.413055109684324,46.970617085785626
+"Fabricação de acessórios do vestuário, exceto para segurança e proteção",12257,1094,8.925511952353757,46.09039732397808
+Fabricação de meias,9595,366,3.814486711829078,45.91638005905858
+"Fabricação de artigos do vestuário, produzidos em malharias e tricotagens, exceto meias",13069,1335,10.215012625296502,45.68148544902687
+Curtimento e outras preparações de couro,32800,1782,5.432926829268292,45.29593495934959
+"Fabricação de artigos para viagem, bolsas e semelhantes de qualquer material",11256,952,8.45771144278607,45.595386164415984
+Fabricação de artefatos de couro não especificados anteriormente,8266,815,9.859666102105008,46.52306637632064
+Fabricação de calçados de couro,143857,5219,3.627908270018143,43.945997298242936
+Fabricação de tênis de qualquer material,17018,729,4.283699612175344,43.238531750695316
+Fabricação de calçados de material sintético,61169,2361,3.859798263826448,45.83867100437582
+Fabricação de calçados de materiais não especificados anteriormente,31048,1713,5.517263591857768,42.228291677402744
+"Fabricação de partes para calçados, de qualquer material",20021,1142,5.704010788671895,44.00745883489004
+Desdobramento de madeira,61752,4169,6.7511983417541135,45.27241222956341
+"Fabricação de madeira laminada e de chapas de madeira compensada, prensada e aglomerada",37286,2099,5.629458778093655,45.89407999427846
+Fabricação de estruturas de madeira e de artigos de carpintaria para construção,25136,2186,8.696690006365372,46.638433587948235
+Fabricação de artefatos de tanoaria e de embalagens de madeira,13897,857,6.16679858962366,45.16994075459934
+"Fabricação de artefatos de madeira, palha, cortiça, vime e material trançado não especificados anteriormente, exceto móveis",22684,2100,9.257626520895785,45.914668194909794
+Fabricação de celulose e outras pastas para a fabricação de papel,18074,1276,7.059864999446718,47.08725240677219
+Fabricação de papel,39877,2594,6.505002883867894,48.07529820865837
+Fabricação de cartolina e papel-cartão,3607,203,5.627945661214306,48.53137417983548
+Fabricação de embalagens de papel,21071,1929,9.154762469745148,47.31495103855218
+Fabricação de embalagens de cartolina e papel-cartão,8931,651,7.289217332885454,45.21472026275521
+Fabricação de chapas e de embalagens de papelão ondulado,32840,2696,8.209500609013398,47.054760454729994
+"Fabricação de produtos de papel, cartolina, papel-cartão e papelão ondulado para uso comercial e de escritório",19824,2599,13.110371267150928,47.11380145278448
+Fabricação de produtos de papel para usos doméstico e higiênico-sanitário,16623,1356,8.157372315466523,47.42364996290275
+"Fabricação de produtos de pastas celulósicas, papel, cartolina, papel-cartão e papelão ondulado não especificados anteriormente",11265,949,8.424323124722592,47.66196182867288
+"Impressão de jornais, livros, revistas e outras publicações periódicas",18930,2707,14.300052826201796,46.098450431414
+Impressão de material de segurança,9610,2398,24.953173777315296,48.750953867499135
+Impressão de materiais para outros usos,49204,9265,18.829769937403462,46.89301005338326
+Serviços de pré-impressão,12739,3017,23.6831776434571,48.49975141952529
+Serviços de acabamentos gráficos,7425,1379,18.572390572390574,47.15227833894499
+Reprodução de materiais gravados em qualquer suporte,1354,262,19.35007385524372,51.307483998030534
+Coquerias,555,26,4.684684684684685,47.551951951951956
+Fabricação de produtos do refino de petróleo,23805,1141,4.793110691031296,47.56114261709726
+"Fabricação de produtos derivados do petróleo, exceto produtos do refino",5571,766,13.749775623765931,47.82678154729847
+Fabricação de álcool,106609,6380,5.984485362399047,40.65198060201294
+"Fabricação de biocombustíveis, exceto álcool",2854,359,12.578836720392431,49.124970801214666
+Fabricação de cloro e álcalis,1178,95,8.064516129032258,49.43067345783816
+Fabricação de intermediários para fertilizantes,4033,351,8.703198611455493,48.34374741714189
+Fabricação de adubos e fertilizantes,29165,4105,14.075090005143151,48.7767186696382
+Fabricação de gases industriais,4630,754,16.285097192224622,49.90453563714902
+Fabricação de produtos químicos inorgânicos não especificados anteriormente,8661,834,9.629373051610667,48.598622176038155
+Fabricação de produtos petroquímicos básicos,5646,408,7.226354941551541,48.34360609280901
+"Fabricação de intermediários para plastificantes, resinas e fibras",1634,144,8.812729498164016,47.38412892696861
+Fabricação de produtos químicos orgânicos não especificados anteriormente,13074,1046,8.000611901483861,48.07345367395846
+Fabricação de resinas termoplásticas,7688,504,6.555671175858481,48.553026361429026
+Fabricação de resinas termofixas,2661,331,12.43893273205562,48.692471501941654
+Fabricação de elastômeros,1028,100,9.72762645914397,46.57457846952014
+Fabricação de fibras artificiais e sintéticas,2999,178,5.9353117705901965,47.37512504168054
+Fabricação de defensivos agrícolas,7562,629,8.317905316053954,46.891386758353136
+Fabricação de desinfestantes domissanitários,1716,212,12.354312354312354,47.894133644133696
+Fabricação de sabões e detergentes sintéticos,22322,2318,10.384374160021503,47.84781829585164
+Fabricação de produtos de limpeza e polimento,20087,2612,13.003435057499876,47.86563448996857
+"Fabricação de cosméticos, produtos de perfumaria e de higiene pessoal",47185,6019,12.756172512450991,48.43717283034869
+"Fabricação de tintas, vernizes, esmaltes e lacas",24661,2916,11.824338023600015,48.59423110714621
+Fabricação de tintas de impressão,1855,240,12.93800539083558,48.31105121293801
+"Fabricação de impermeabilizantes, solventes e produtos afins",3608,509,14.107538802660754,48.70177383592016
+Fabricação de adesivos e selantes,5928,797,13.444669365721998,48.14884165542061
+Fabricação de explosivos,6622,490,7.399577167019028,48.44498137521387
+Fabricação de aditivos de uso industrial,10062,1311,13.029218843172332,48.30143112701249
+Fabricação de catalisadores,524,28,5.343511450381679,46.12150127226463
+Fabricação de produtos químicos não especificados anteriormente,35838,4095,11.426418884982422,48.286344104023705
+Fabricação de produtos farmoquímicos,4965,992,19.97985901309164,52.42759315206449
+Fabricação de medicamentos para uso humano,83273,18521,22.241302703157086,52.99406770501848
+Fabricação de medicamentos para uso veterinário,10071,2578,25.598252407903882,53.78512560818185
+Fabricação de preparações farmacêuticas,3392,1150,33.903301886792455,57.21128144654093
+Fabricação de pneumáticos e de câmaras-de-ar,28845,1184,4.104697521234183,45.86638932223954
+Reforma de pneumáticos usados,16181,2779,17.17446387738706,52.021692108027885
+Fabricação de artefatos de borracha não especificados anteriormente,45898,3217,7.009020000871498,45.20225282147374
+Fabricação de laminados planos e tubulares de material plástico,16000,1603,10.01875,47.69485416666662
+Fabricação de embalagens de material plástico,117235,8501,7.2512474943489575,47.145292219331544
+Fabricação de tubos e acessórios de material plástico para uso na construção,10682,611,5.719902639955064,47.13109280409412
+Fabricação de artefatos de material plástico não especificados anteriormente,169562,14630,8.628112430851251,46.797822232182504
+Fabricação de vidro plano e de segurança,18120,1947,10.745033112582782,47.14946651949965
+Fabricação de embalagens de vidro,7130,541,7.5876577840112205,46.94581580177653
+Fabricação de artigos de vidro,15998,2092,13.076634579322416,48.72223611284746
+Fabricação de cimento,12907,1079,8.359804757108545,48.749102554169546
+"Fabricação de artefatos de concreto, cimento, fibrocimento, gesso e materiais semelhantes",96932,10468,10.799323236908348,46.95627862831678
+Fabricação de produtos cerâmicos refratários,8522,629,7.3808965031682705,45.52800594539625
+Fabricação de produtos cerâmicos não-refratários para uso estrutural na construção,102504,6400,6.243658784047452,44.89025143734226
+Fabricação de produtos cerâmicos não-refratários não especificados anteriormente,21637,1165,5.3842954198826085,41.10120010475883
+Aparelhamento e outros trabalhos em pedras,45237,6045,13.36295510312355,48.21199460618521
+Fabricação de cal e gesso,7541,635,8.420633868187242,47.22561110374401
+Fabricação de produtos de minerais não-metálicos não especificados anteriormente,21325,2046,9.594372801875732,47.05045720984767
+Produção de ferro-gusa,11550,659,5.705627705627705,44.35440115440116
+Produção de ferroligas,8182,683,8.347592275727205,46.16116678888616
+Produção de semi-acabados de aço,6554,381,5.8132438205675925,47.08188383684263
+Produção de laminados planos de aço,32115,1514,4.714307955783902,49.384379054439755
+Produção de laminados longos de aço,26938,1412,5.241666047961987,46.16818868017913
+"Produção de relaminados, trefilados e perfilados de aço",12088,1162,9.612839179351424,46.53557246856388
+Produção de tubos de aço com costura,8746,938,10.724902812714383,46.54912722006245
+Produção de outros tubos de ferro e aço,2134,216,10.121836925960636,46.76897844423619
+Metalurgia do alumínio e suas ligas,21053,1564,7.428869994775092,46.563340141547506
+Metalurgia dos metais preciosos,804,81,10.074626865671641,46.56135986733001
+Metalurgia do cobre,5089,248,4.873256042444488,45.70079255911439
+Metalurgia dos metais não-ferrosos e suas ligas não especificados anteriormente,12777,1177,9.211865070047743,46.17244527927783
+Fundição de ferro e aço,44361,2228,5.022429611595771,45.070632612730414
+Fundição de metais não-ferrosos e suas ligas,12941,859,6.637817788424388,44.37740514643382
+Fabricação de estruturas metálicas,44210,9482,21.447636281384302,47.675676694563876
+Fabricação de esquadrias de metal,49237,10480,21.284806141722687,46.524233130911135
+Fabricação de obras de caldeiraria pesada,12336,1415,11.470492866407263,47.78274967574575
+"Fabricação de tanques, reservatórios metálicos e caldeiras para aquecimento central",6475,817,12.617760617760618,45.57657657657657
+"Fabricação de caldeiras geradoras de vapor, exceto para aquecimento central e para veículos",2882,381,13.21998612074948,46.01966227157068
+Produção de forjados de aço e de metais não-ferrosos e suas ligas,4792,356,7.429048414023372,45.36171396772395
+Produção de artefatos estampados de metal,25275,2736,10.82492581602374,45.68712166172115
+"Serviços de usinagem, solda, tratamento e revestimento em metais",42589,4450,10.448707412712203,45.96946003271572
+Fabricação de artigos de cutelaria,8004,386,4.822588705647177,46.02840246543392
+"Fabricação de artigos de serralheria, exceto esquadrias",30464,4032,13.23529411764706,44.9123993347339
+Fabricação de ferramentas,21234,2063,9.715550532165395,44.894179146651645
+"Fabricação de equipamento bélico pesado, armas de fogo e munições",7531,433,5.749568450404992,47.55729650776789
+Fabricação de embalagens metálicas,18016,1085,6.022424511545292,47.913428804026076
+Fabricação de produtos de trefilados de metal,24478,3019,12.333523980717379,46.44727238064108
+Fabricação de artigos de metal para uso doméstico e pessoal,20437,1900,9.296863531829525,45.58826311754818
+Fabricação de produtos de metal não especificados anteriormente,81489,9114,11.184331627581637,46.04555216041426
+Fabricação de componentes eletrônicos,29655,2671,9.00691283088855,45.58207160119153
+Fabricação de equipamentos de informática,9233,1128,12.217047546842846,46.59009350518069
+Fabricação de periféricos para equipamentos de informática,24795,1785,7.1990320629159115,45.2856758755125
+Fabricação de equipamentos transmissores de comunicação,6257,717,11.459165734377496,46.841244472857035
+Fabricação de aparelhos telefônicos e de outros equipamentos de comunicação,9976,980,9.823576583801124,46.0737770649559
+"Fabricação de aparelhos de recepção, reprodução, gravação e amplificação de áudio e vídeo",11131,1000,8.98391878537418,46.05531099332194
+"Fabricação de aparelhos e equipamentos de medida, teste e controle",17931,2471,13.780603424237354,46.664361534028544
+Fabricação de cronômetros e relógios,2335,341,14.603854389721626,47.78915060670949
+Fabricação de aparelhos eletromédicos e eletroterapêuticos e equipamentos de irradiação,5491,814,14.824257876525223,47.415285618891446
+"Fabricação de equipamentos e instrumentos ópticos, fotográficos e cinematográficos",1585,219,13.817034700315459,47.06288117770767
+"Fabricação de mídias virgens, magnéticas e ópticas",25,5,20,52.57333333333335
+"Fabricação de geradores, transformadores e motores elétricos",30193,1887,6.2497929983771074,45.107685004250435
+"Fabricação de pilhas, baterias e acumuladores elétricos, exceto para veículos automotores",2106,103,4.8907882241215574,44.578664134219686
+Fabricação de baterias e acumuladores para veículos automotores,8424,558,6.623931623931624,45.026867679645434
+Fabricação de aparelhos e equipamentos para distribuição e controle de energia elétrica,18270,1837,10.054734537493157,47.86458675424193
+Fabricação de material elétrico para instalações em circuito de consumo,8096,812,10.029644268774703,45.98361330698286
+"Fabricação de fios, cabos e condutores elétricos isolados",21556,1617,7.501391723881983,47.487180676687025
+Fabricação de lâmpadas e outros equipamentos de iluminação,9659,1280,13.251889429547573,46.65969562066467
+"Fabricação de fogões, refrigeradores e máquinas de lavar e secar para uso doméstico",28930,1618,5.592810231593502,45.45500633713557
+Fabricação de aparelhos eletrodomésticos não especificados anteriormente,18551,1326,7.147862648913805,46.02249654106696
+Fabricação de equipamentos e aparelhos elétricos não especificados anteriormente,25952,2878,11.089704069050555,46.29982274969182
+"Fabricação de motores e turbinas, exceto para aviões e veículos rodoviários",5397,453,8.393551973318509,46.55104687789511
+"Fabricação de equipamentos hidráulicos e pneumáticos, exceto válvulas",11098,1490,13.425842494143089,46.518171442301885
+"Fabricação de válvulas, registros e dispositivos semelhantes",15841,1288,8.130799823243482,46.55249037308251
+Fabricação de compressores,11981,3495,29.171187713880308,52.431572211557175
+Fabricação de equipamentos de transmissão para fins industriais,9547,945,9.898397402325337,45.1978282881184
+Fabricação de aparelhos e equipamentos para instalações térmicas,4199,587,13.979518933079305,46.83702468841789
+"Fabricação de máquinas, equipamentos e aparelhos para transporte e elevação de cargas e pessoas",18235,3033,16.632848916918014,47.57157481034644
+Fabricação de máquinas e aparelhos de refrigeração e ventilação para uso industrial e comercial,19981,3014,15.084330113607928,47.517625077156566
+Fabricação de aparelhos e equipamentos de ar condicionado,4586,460,10.03052769297863,47.272714057275714
+Fabricação de máquinas e equipamentos para saneamento básico e ambiental,3231,396,12.256267409470752,47.44898380274423
+Fabricação de máquinas e equipamentos de uso geral não especificados anteriormente,45471,5607,12.330936201095204,46.40019646221402
+Fabricação de tratores agrícolas,5786,358,6.187348772900104,45.70774282751465
+Fabricação de equipamentos para irrigação agrícola,2442,347,14.209664209664211,46.25702975702976
+"Fabricação de máquinas e equipamentos para a agricultura e pecuária, exceto para irrigação",64017,5655,8.833591077370073,44.80179223227167
+Fabricação de máquinas-ferramenta,15796,1507,9.540389972144848,45.23702203089389
+Fabricação de máquinas e equipamentos para a prospecção e extração de petróleo,7107,653,9.188124384409736,47.17438206463108
+"Fabricação de outras máquinas e equipamentos para uso na extração mineral, exceto na extração de petróleo",4672,478,10.231164383561644,45.80286815068493
+"Fabricação de tratores, exceto agrícolas",5745,251,4.369016536118363,46.121612996808814
+"Fabricação de máquinas e equipamentos para terraplenagem, pavimentação e construção, exceto tratores",5722,498,8.70325061167424,45.70400792263776
+"Fabricação de máquinas para a indústria metalúrgica, exceto máquinas-ferramenta",5391,625,11.593396401409757,45.45780003709882
+"Fabricação de máquinas e equipamentos para as indústrias de alimentos, bebidas e fumo",17231,1912,11.096279960536243,45.72098736772865
+Fabricação de máquinas e equipamentos para a indústria têxtil,1717,253,14.735002912055911,47.22597553873032
+"Fabricação de máquinas e equipamentos para as indústrias do vestuário, do couro e de calçados",2527,331,13.098535813217255,45.87798443477112
+"Fabricação de máquinas e equipamentos para as indústrias de celulose, papel e papelão e artefatos",3216,324,10.074626865671641,45.549958540630165
+Fabricação de máquinas e equipamentos para a indústria do plástico,2056,213,10.359922178988327,45.47227626459141
+Fabricação de máquinas e equipamentos para uso industrial específico não especificados anteriormente,37449,4403,11.75732329301183,46.15668420162534
+"Fabricação de automóveis, camionetas e utilitários",83704,3354,4.006976966453216,47.99884513683143
+Fabricação de caminhões e ônibus,23386,1499,6.409817839733174,46.818680692152
+"Fabricação de cabines, carrocerias e reboques para veículos automotores",43346,7399,17.069625801688737,46.66259862501733
+Fabricação de peças e acessórios para o sistema motor de veículos automotores,33344,1887,5.659189059500959,44.63211772232887
+Fabricação de peças e acessórios para os sistemas de marcha e transmissão de veículos automotores,11329,415,3.663165327919499,44.0301880130638
+Fabricação de peças e acessórios para o sistema de freios de veículos automotores,14197,577,4.064238923716278,44.05571599633727
+Fabricação de peças e acessórios para o sistema de direção e suspensão de veículos automotores,13893,740,5.326423378679911,46.096811343842184
+"Fabricação de material elétrico e eletrônico para veículos automotores, exceto baterias",32044,1348,4.206715765821994,44.534338201639414
+Fabricação de peças e acessórios para veículos automotores não especificados anteriormente,152714,7640,5.0028157208900295,44.2909141707156
+Recondicionamento e recuperação de motores para veículos automotores,9443,1697,17.970983797521974,48.27251226658195
+Construção de embarcações e estruturas flutuantes,17931,1752,9.770788020746194,48.569795326529395
+Construção de embarcações para esporte e lazer,2633,240,9.115077857956704,48.14204329661981
+"Fabricação de locomotivas, vagões e outros materiais rodantes",2384,109,4.572147651006712,43.94463087248322
+Fabricação de peças e acessórios para veículos ferroviários,1535,119,7.752442996742672,45.61085776330076
+Fabricação de aeronaves,15234,935,6.137586976499934,46.98393943372273
+"Fabricação de turbinas, motores e outros componentes e peças para aeronaves",3125,290,9.28,46.92778666666664
+Fabricação de motocicletas,11367,651,5.727104776986012,47.31433095803641
+Fabricação de bicicletas e triciclos não-motorizados,8048,873,10.847415506958251,46.51768555334659
+Fabricação de equipamentos de transporte não especificados anteriormente,3348,326,9.73715651135006,46.123755475905995
+Fabricação de móveis com predominância de madeira,173939,14408,8.283363707966586,45.74817608471931
+Fabricação de móveis com predominância de metal,26683,3099,11.614136341490838,45.965433671875985
+"Fabricação de móveis de outros materiais, exceto madeira e metal",7332,712,9.710856519367157,45.99618112384068
+Fabricação de colchões,24261,2636,10.865174559993406,46.669455779508915
+Lapidação de gemas e fabricação de artefatos de ourivesaria e joalheria,10620,1693,15.941619585687384,43.416258631512925
+Fabricação de bijuterias e artefatos semelhantes,6830,1105,16.178623718887263,45.197218155197646
+Fabricação de instrumentos musicais,1595,179,11.22257053291536,45.48610240334378
+Fabricação de artefatos para pesca e esporte,3642,516,14.168039538714991,46.47501372872051
+Fabricação de brinquedos e jogos recreativos,12271,997,8.124847200717138,46.423192893814736
+Fabricação de instrumentos e materiais para uso médico e odontológico e de artigos ópticos,58566,16188,27.64061059317693,51.34632152898709
+"Fabricação de escovas, pincéis e vassouras",6987,815,11.66451982252755,49.483135346596036
+Fabricação de equipamentos e acessórios para segurança e proteção pessoal e profissional,11761,1185,10.075673837258737,46.03361392171863
+Fabricação de produtos diversos não especificados anteriormente,32881,5983,18.19591861561388,47.97335847449896
+"Manutenção e reparação de tanques, reservatórios metálicos e caldeiras, exceto para veículos",7035,832,11.826581378820185,48.29547500592273
+Manutenção e reparação de equipamentos eletrônicos e ópticos,12522,2325,18.56732151413512,50.4032902092318
+Manutenção e reparação de máquinas e equipamentos elétricos,15403,2352,15.269752645588522,50.134237919020066
+Manutenção e reparação de máquinas e equipamentos da indústria mecânica,82574,12855,15.56785428827476,50.26205988971498
+Manutenção e reparação de veículos ferroviários,2017,190,9.419930589985126,47.59246405552799
+Manutenção e reparação de aeronaves,6478,665,10.265514047545539,47.9188020994134
+Manutenção e reparação de embarcações,5483,708,12.912639066204632,50.799319107544505
+Manutenção e reparação de equipamentos e produtos não especificados anteriormente,7571,1147,15.14991414608374,49.464976004931074
+Instalação de máquinas e equipamentos industriais,26461,3877,14.651751634480933,49.71013945051206
+Instalação de equipamentos não especificados anteriormente,13477,2218,16.457668620612896,48.362617793277465
+Geração de energia elétrica,35021,4090,11.678707061477398,49.348467110210045
+Transmissão de energia elétrica,10634,1495,14.058679706601469,50.365619710363
+Comércio atacadista de energia elétrica,2106,323,15.33713200379867,48.9713516935739
+Distribuição de energia elétrica,73448,12175,16.576353338416293,51.600851395999015
+Produção de gás,4013,462,11.512584101669573,49.81402109809785
+"Produção e distribuição de vapor, água quente e ar condicionado",629,54,8.585055643879173,51.290937996820375
+"Captação, tratamento e distribuição de água",129436,26853,20.74616026453228,52.51023156875463
+Gestão de redes de esgoto,5623,875,15.561088386982039,51.655818365048276
+"Atividades relacionadas a esgoto, exceto a gestão de redes",7346,928,12.632725292676286,50.06951629004447
+Coleta de resíduos não-perigosos,125018,9619,7.694092050744692,49.68434678739596
+Coleta de resíduos perigosos,6314,796,12.606905289832119,49.341041072748375
+Tratamento e disposição de resíduos não-perigosos,28069,1860,6.626527485838469,50.506596838742645
+Tratamento e disposição de resíduos perigosos,4959,543,10.949788263762855,48.71109766754046
+Recuperação de materiais metálicos,8535,1006,11.786760398359695,48.02604959968754
+Recuperação de materiais plásticos,10114,841,8.315206644255488,47.49370509524752
+Recuperação de materiais não especificados anteriormente,12399,1090,8.791031534801194,48.52789203430378
+Descontaminação e outros serviços de gestão de resíduos,1698,184,10.836277974087162,51.31723596387909
+Incorporação de empreendimentos imobiliários,115225,15416,13.37904100672597,52.28802487886016
+Construção de edifícios,663103,55097,8.308965575483748,51.9809481583806
+Construção de rodovias e ferrovias,128837,12939,10.042922452401095,49.511980254119585
+Construção de obras de arte especiais,23363,1725,7.3834695886658395,50.27751858351519
+"Obras de urbanização - ruas, praças e calçadas",42247,3078,7.285724430137051,49.89922755856435
+Obras para geração e distribuição de energia elétrica e para telecomunicações,181680,44674,24.58938793483047,54.175067884925824
+"Construção de redes de abastecimento de água, coleta de esgoto e construções correlatas",32673,2995,9.166590150889114,50.42888623634197
+"Construção de redes de transportes por dutos, exceto para água e esgoto",2327,174,7.477438762354964,49.05686864346079
+"Obras portuárias, marítimas e fluviais",3303,309,9.35513169845595,50.34221414875364
+Montagem de instalações industriais e de estruturas metálicas,78843,13717,17.397866646373174,50.067936701207884
+Obras de engenharia civil não especificadas anteriormente,81686,7427,9.0921332908944,50.60737866137808
+Demolição e preparação de canteiros de obras,4954,430,8.679854662898666,47.94832458619297
+Perfurações e sondagens,7689,657,8.54467420991026,47.53955867689776
+Obras de terraplenagem,56806,4568,8.041404077034116,47.67692966705394
+Serviços de preparação do terreno não especificados anteriormente,4866,721,14.817098232634606,49.312371557747625
+Instalações elétricas,160314,22778,14.20836608156493,53.18542776467847
+"Instalações hidráulicas, de sistemas de ventilação e refrigeração",69845,9385,13.436895983964492,52.27496599613427
+Obras de instalações em construções não especificadas anteriormente,51975,13147,25.294853294853294,52.483136123136084
+Obras de acabamento,107358,9275,8.639318914286779,51.57712513273346
+Obras de fundações,18511,1121,6.055858678623522,50.35589649397658
+Serviços especializados para construção não especificados anteriormente,140801,14392,10.221518313080164,51.57252434286692
+Comércio a varejo e por atacado de veículos automotores,218391,103737,47.50058381526711,54.0708301471519
+Representantes comerciais e agentes do comércio de veículos automotores,7739,3773,48.75306887194728,54.77632769091614
+Manutenção e reparação de veículos automotores,203270,36196,17.80685787376396,48.62042275462845
+Comércio de peças e acessórios para veículos automotores,426567,142708,33.45500237946208,52.339657466861446
+"Comércio por atacado e a varejo de motocicletas, peças e acessórios",66842,30450,45.55518985069268,53.704277749518724
+"Representantes comerciais e agentes do comércio de motocicletas, peças e acessórios",517,269,52.03094777562862,54.721470019342355
+Manutenção e reparação de motocicletas,6651,1858,27.935648774620358,49.768606224627845
+Representantes comerciais e agentes do comércio de matérias-primas agrícolas e animais vivos,3278,1018,31.055521659548507,51.430038641448064
+"Representantes comerciais e agentes do comércio de combustíveis, minerais, produtos siderúrgicos e químicos",2003,694,34.648027958062904,51.89898485604929
+"Representantes comerciais e agentes do comércio de madeira, material de construção e ferragens",3231,1543,47.75611265861962,54.96358196636748
+"Representantes comerciais e agentes do comércio de máquinas, equipamentos, embarcações e aeronaves",3320,1293,38.945783132530124,53.54678714859434
+"Representantes comerciais e agentes do comércio de eletrodomésticos, móveis e artigos de uso doméstico",2678,1261,47.0873786407767,54.623101817276634
+"Representantes comerciais e agentes do comércio de têxteis, vestuário, calçados e artigos de viagem",3844,1898,49.375650364203956,54.42516475893168
+"Representantes comerciais e agentes do comércio de produtos alimentícios, bebidas e fumo",9550,3167,33.16230366492147,53.8193717277487
+Representantes comerciais e agentes do comércio especializado em produtos não especificados anteriormente,8738,3449,39.47127489127947,54.69768062867168
+Representantes comerciais e agentes do comércio de mercadorias em geral não especializado,14255,6363,44.63696948439144,54.662714836899305
+Comércio atacadista de café em grão,7294,1458,19.9890320811626,50.11237546842153
+Comércio atacadista de soja,13657,3110,22.772204730175,49.93817578287076
+"Comércio atacadista de animais vivos, alimentos para animais e matérias-primas agrícolas, exceto café e soja",55756,13270,23.800129134084223,49.8512088385107
+Comércio atacadista de leite e laticínios,18334,3923,21.397403730773426,52.34971455583436
+"Comércio atacadista de cereais e leguminosas beneficiados, farinhas, amidos e féculas",31891,6996,21.937223668119533,49.89115006323622
+Comércio atacadista de hortifrutigranjeiros,72980,12034,16.489449164154564,49.5216269297524
+"Comércio atacadista de carnes, produtos da carne e pescado",48115,8636,17.948664657591188,50.31864629879804
+Comércio atacadista de bebidas,113466,19441,17.13376694340155,49.996401271452825
+Comércio atacadista de produtos do fumo,9722,1891,19.450730302406914,50.95995337036272
+Comércio atacadista especializado em produtos alimentícios não especificados anteriormente,60408,15709,26.004833796848096,52.2632984593652
+Comércio atacadista de produtos alimentícios em geral,149713,37646,25.145444951340227,52.01074277673501
+"Comércio atacadista de tecidos, artefatos de tecidos e de armarinho",24087,8996,37.34794702536638,52.939151132699514
+Comércio atacadista de artigos do vestuário e acessórios,38351,13632,35.545357357044146,52.4095503811287
+Comércio atacadista de calçados e artigos de viagem,6559,2219,33.83137673425827,52.027798953092464
+Comércio atacadista de produtos farmacêuticos para uso humano e veterinário,69224,20125,29.07228706806888,52.34755768712196
+"Comércio atacadista de instrumentos e materiais para uso médico, cirúrgico, ortopédico e odontológico",44439,19006,42.76873917054839,56.30339716615287
+"Comércio atacadista de cosméticos, produtos de perfumaria e de higiene pessoal",64837,12935,19.950028533090673,51.81690495653205
+Comércio atacadista de artigos de escritório e de papelaria,26863,9627,35.83739716338458,52.665574706225456
+Comércio atacadista de equipamentos e artigos de uso pessoal e doméstico não especificados anteriormente,76296,23593,30.922984166928803,51.971444549299264
+"Comércio atacadista de computadores, periféricos e suprimentos de informática",23539,6031,25.621309316453544,50.28729626010736
+Comércio atacadista de componentes eletrônicos e equipamentos de telefonia e comunicação,14100,4080,28.936170212765955,51.5545390070922
+"Comércio atacadista de máquinas, aparelhos e equipamentos para uso agropecuário",32905,12211,37.10986172314238,53.27343362204322
+"Comércio atacadista de máquinas, equipamentos para terraplenagem, mineração e construção",7901,1889,23.908366029616506,52.31109986077711
+Comércio atacadista de máquinas e equipamentos para uso industrial,33854,8951,26.44000708926567,50.75443571414506
+"Comércio atacadista de máquinas, aparelhos e equipamentos para uso odonto-médico-hospitalar",10146,3255,32.0816085156712,52.6466916354557
+Comércio atacadista de máquinas e equipamentos para uso comercial,7800,2645,33.91025641025641,52.10440170940171
+"Comércio atacadista de máquinas, aparelhos e equipamentos não especificados anteriormente",26818,6302,23.499142367066895,50.510751485320846
+Comércio atacadista de madeira e produtos derivados,15532,2529,16.28251352047386,46.76895012447419
+Comércio atacadista de ferragens e ferramentas,27051,7736,28.597833721489042,50.959212844873235
+Comércio atacadista de material elétrico,15299,5097,33.31590300019609,52.216136130901845
+Comércio atacadista de cimento,4053,1074,26.498889711324946,50.635825314581794
+Comércio atacadista especializado de materiais de construção não especificados anteriormente e de materiais de construção em geral,45364,12027,26.512212326955293,50.944111336448906
+"Comércio atacadista de combustíveis sólidos, líquidos e gasosos, exceto gás natural e GLP",28500,6451,22.635087719298248,49.85091228070173
+Comércio atacadista de gás liqüefeito de petróleo (GLP),15880,2536,15.96977329974811,49.728820319059615
+"Comércio atacadista de defensivos agrícolas, adubos, fertilizantes e corretivos do solo",34186,12571,36.77236295559585,52.438278827590224
+"Comércio atacadista de produtos químicos e petroquímicos, exceto agroquímicos",13680,3040,22.22222222222222,50.16245126705653
+"Comércio atacadista de produtos siderúrgicos e metalúrgicos, exceto para construção",13181,3006,22.80555344814506,48.9823230407404
+Comércio atacadista de papel e papelão em bruto e de embalagens,22250,5731,25.757303370786516,50.86365543071155
+Comércio atacadista de resíduos e sucatas,43976,5544,12.606876478078952,47.99307955854711
+Comércio atacadista especializado de outros produtos intermediários não especificados anteriormente,41682,10525,25.25070773955185,50.684076259936404
+"Comércio atacadista de mercadorias em geral, com predominância de produtos alimentícios",86159,22631,26.266553697234187,52.01769983402779
+"Comércio atacadista de mercadorias em geral, com predominância de insumos agropecuários",11301,4268,37.766569330147775,52.865056189717684
+"Comércio atacadista de mercadorias em geral, sem predominância de alimentos ou de insumos agropecuários",64930,16100,24.795934082858462,51.24133682427225
+"Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - hipermercados e supermercados",1297632,514693,39.66401876649158,55.40655465750947
+"Comércio varejista de mercadorias em geral, com predominância de produtos alimentícios - minimercados, mercearias e armazéns",383377,174222,45.444040722317716,56.36921794126059
+"Comércio varejista de mercadorias em geral, sem predominância de produtos alimentícios",155585,93772,60.270591638011375,57.0543604246339
+"Comércio varejista de produtos de padaria, laticínio, doces, balas e semelhantes",305663,148236,48.496546850616525,56.874745498582826
+Comércio varejista de carnes e pescados - açougues e peixarias,82130,27610,33.6174357725557,57.195657291286125
+Comércio varejista de bebidas,56609,23305,41.16836545425639,55.60214806832842
+Comércio varejista de hortifrutigranjeiros,67422,27195,40.33549879861173,54.66631069977163
+Comércio varejista de produtos alimentícios em geral ou especializado em produtos alimentícios não especificados anteriormente,149039,69000,46.296606928387874,56.649751631004754
+Comércio varejista de combustíveis para veículos automotores,353301,52343,14.815412353771995,52.712270839878784
+Comércio varejista de lubrificantes,12748,2997,23.50957012864763,53.47165568455182
+Comércio varejista de tintas e materiais para pintura,36387,18843,51.78497815153764,56.05933437766236
+Comércio varejista de material elétrico,51147,21950,42.91551801669697,54.927887591973445
+Comércio varejista de vidros,34335,8135,23.693024610455804,54.342556186592915
+"Comércio varejista de ferragens, madeira e materiais de construção",580732,229148,39.458476543396955,53.38426158710039
+Comércio varejista especializado de equipamentos e suprimentos de informática,84638,30089,35.5502256669581,52.97939065982966
+Comércio varejista especializado de equipamentos de telefonia e comunicação,76716,43960,57.30225767766828,56.80542085962076
+Comércio varejista especializado de eletrodomésticos e equipamentos de áudio e vídeo,183743,102804,55.94988652628944,56.57756939493386
+"Comércio varejista especializado de móveis, colchoaria e artigos de iluminação",213541,102459,47.980949794184724,54.431456566498525
+"Comércio varejista especializado de tecidos e artigos de cama, mesa e banho",118063,80849,68.47954058426433,58.25866980623331
+Comércio varejista especializado de instrumentos musicais e acessórios,5376,3354,62.38839285714286,57.15866815476191
+"Comércio varejista especializado de peças e acessórios para aparelhos eletroeletrônicos para uso doméstico, exceto informática e comunicação",29093,12976,44.601794246038565,54.99752517787788
+Comércio varejista de artigos de uso doméstico não especificados anteriormente,79583,40307,50.647751404194366,55.76128486402037
+"Comércio varejista de livros, jornais, revistas e papelaria",106817,65049,60.897609931003494,57.251807608651525
+"Comércio varejista de discos, CDs, DVDs e fitas",2685,1644,61.22905027932961,57.27163252638111
+Comércio varejista de artigos recreativos e esportivos,85271,52209,61.2271463920911,57.362890079862986
+Comércio varejista de produtos farmacêuticos para uso humano e veterinário,493562,386444,78.29695154813378,70.8603323054314
+"Comércio varejista de cosméticos, produtos de perfumaria e de higiene pessoal",113359,76008,67.05069734207252,59.08532185358028
+Comércio varejista de artigos médicos e ortopédicos,20023,12273,61.29451131199121,59.88050408696661
+Comércio varejista de artigos de óptica,73687,54610,74.11076580672304,59.33114841604803
+Comércio varejista de artigos do vestuário e acessórios,676998,486712,71.89267915119395,58.730280345485994
+Comércio varejista de calçados e artigos de viagem,195493,147973,75.69222427401493,59.34884284006758
+Comércio varejista de jóias e relógios,37790,27406,72.5218311722678,58.31640645673458
+Comércio varejista de gás liqüefeito de petróleo (GLP),51778,16476,31.820464289852836,54.34051141411411
+Comércio varejista de artigos usados,5281,2230,42.22685097519409,53.94697973868586
+Comércio varejista de outros produtos novos não especificados anteriormente,377025,193686,51.37219017306545,56.15481113100359
+Transporte ferroviário de carga,33096,4943,14.935339618080734,51.97816453146405
+Transporte metroferroviário de passageiros,34512,7166,20.763792304126103,54.531447998763696
+"Transporte rodoviário coletivo de passageiros, com itinerário fixo, municipal e em região metropolitana",455346,346622,76.12277257294453,64.24510957967495
+"Transporte rodoviário coletivo de passageiros, com itinerário fixo, intermunicipal, interestadual e internacional",115847,80565,69.54431275734375,62.84975873350195
+Transporte rodoviário de táxi,21454,11497,53.58907429849912,58.02812218389736
+Transporte escolar,20353,11227,55.161401267626395,63.6162236525328
+"Transporte rodoviário coletivo de passageiros, sob regime de fretamento, e outros transportes rodoviários não especificados anteriormente",65055,41753,64.18107754976559,62.53476289293685
+Transporte rodoviário de carga,905191,128127,14.154692214129394,47.63939654724805
+Transporte dutoviário,3483,303,8.699397071490095,49.41697770121544
+"Trens turísticos, teleféricos e similares",286,149,52.09790209790209,58.85664335664337
+Transporte marítimo de cabotagem,7490,1149,15.34045393858478,55.62042723631511
+Transporte marítimo de longo curso,814,96,11.793611793611793,56.82227682227683
+Transporte por navegação interior de carga,9330,1563,16.7524115755627,53.38345837799212
+Transporte por navegação interior de passageiros em linhas regulares,2846,630,22.13633169360506,57.21714687280392
+Navegação de apoio,16835,1745,10.365310365310364,54.66918126918122
+Transporte por navegação de travessia,4039,703,17.40529834117356,55.952050837666114
+Transportes aquaviários não especificados anteriormente,1316,413,31.382978723404253,57.11296859169202
+Transporte aéreo de passageiros regular,54049,35480,65.64413772687746,65.03005297662
+Transporte aéreo de passageiros não-regular,5929,2904,48.97959183673469,55.765390453702146
+Transporte aéreo de carga,1853,659,35.56395035078251,53.72369131138694
+Transporte espacial,4,4,100,62.083333333333336
+Armazenamento,80397,13655,16.984464594450042,49.34957357447002
+Carga e descarga,48582,4628,9.526161952986703,49.455724342349065
+"Concessionárias de rodovias, pontes, túneis e serviços relacionados",27090,14550,53.70985603543743,58.01040974529346
+Terminais rodoviários e ferroviários,6465,1394,21.562258313998452,52.11982469708683
+Estacionamento de veículos,71028,14064,19.800642000337895,57.64737849862025
+Atividades auxiliares dos transportes terrestres não especificadas anteriormente,26033,7805,29.981177735950524,51.665053329748076
+Gestão de portos e terminais,37948,6018,15.858543269737535,51.078862302800346
+Atividades de agenciamento marítimo,7685,2489,32.38776837996096,52.81010626762088
+Atividades auxiliares dos transportes aquaviários não especificadas anteriormente,2641,488,18.477849299507763,53.06550549034454
+Atividades auxiliares dos transportes aéreos,45166,17713,39.21755302661294,57.024576008501924
+Atividades relacionadas à organização do transporte de carga,62972,12869,20.43606682335006,49.8344502318491
+Atividades de Correio,117811,36772,31.21270509544949,51.3329711713394
+Atividades de malote e de entrega,42528,9999,23.511568848758465,55.83182844243789
+Hotéis e similares,318544,160100,50.259932693756596,57.50122641351485
+Outros tipos de alojamento não especificados anteriormente,18717,9404,50.24309451300957,59.536499795195105
+Restaurantes e outros estabelecimentos de serviços de alimentação e bebidas,1290572,594465,46.06213368955781,58.716545325121864
+Serviços ambulantes de alimentação,7747,3100,40.015489867045304,57.452777419216005
+"Serviços de catering, bufê e outros serviços de comida preparada",284594,138783,48.765258578887824,58.975568704892
+Edição de livros,13497,3690,27.339408757501666,50.74895655824753
+Edição de jornais,6800,1843,27.10294117647059,52.176862745098
+Edição de revistas,3398,842,24.77928193054738,50.55444379046499
+"Edição de cadastros, listas e de outros produtos gráficos",2859,729,25.498426023084996,49.19703859158216
+Edição integrada à impressão de livros,9016,1543,17.11401952085182,47.829451345755714
+Edição integrada à impressão de jornais,13729,3374,24.575715638429603,51.49828829485027
+Edição integrada à impressão de revistas,1927,457,23.71562013492475,48.97457187337832
+"Edição integrada à impressão de cadastros, listas e de outros produtos gráficos",14340,2598,18.11715481171548,46.62498837749889
+"Atividades de produção cinematográfica, de vídeos e de programas de televisão",9200,2422,26.32608695652174,50.9400724637681
+"Atividades de pós-produção cinematográfica, de vídeos e de programas de televisão",1418,345,24.33004231311707,51.62529384109076
+"Distribuição cinematográfica, de vídeo e de programas de televisão",716,161,22.48603351955307,49.48324022346369
+Atividades de exibição cinematográfica,14623,8736,59.74150311153662,58.910483484921016
+Atividades de gravação de som e de edição de música,1845,551,29.864498644986448,52.63775971093041
+Atividades de rádio,34888,6194,17.753955514790185,52.25056370862953
+Atividades de televisão aberta,47868,6593,13.77329322303,49.90578953232506
+Programadoras e atividades relacionadas à televisão por assinatura,3272,477,14.578239608801958,48.84820700896497
+Telecomunicações por fio,91408,37436,40.95483983896377,53.69869158060566
+Telecomunicações sem fio,39813,15076,37.86702835757165,54.57779284823213
+Telecomunicações por satélite,1837,380,20.685900925421883,51.30792959535475
+Operadoras de televisão por assinatura por cabo,3302,1529,46.30526953361599,55.85968100141328
+Operadoras de televisão por assinatura por microondas,12,9,75,63.25000000000001
+Operadoras de televisão por assinatura por satélite,418,174,41.62679425837321,53.82695374800639
+Outras atividades de telecomunicações,59469,23746,39.93004758781886,54.70652496819067
+Desenvolvimento de programas de computador sob encomenda,98127,11529,11.749059891772905,47.62274059806842
+Desenvolvimento e licenciamento de programas de computador customizáveis,50740,6903,13.604651162790699,48.10042044409408
+Desenvolvimento e licenciamento de programas de computador não-customizáveis,47593,6257,13.146891349568213,48.32608436814942
+Consultoria em tecnologia da informação,77365,14873,19.22445550313449,49.36480320558391
+"Suporte técnico, manutenção e outros serviços em tecnologia da informação",95815,23872,24.914679329958776,51.31233105463655
+"Tratamento de dados, provedores de serviços de aplicação e serviços de hospedagem na internet",56698,16956,29.9058167836608,52.00316883605536
+"Portais, provedores de conteúdo e outros serviços de informação na internet",23500,7162,30.47659574468085,50.71058156028372
+Agências de notícias,1294,244,18.856259659969087,50.68418341061312
+Outras atividades de prestação de serviços de informação não especificadas anteriormente,10350,3953,38.193236714975846,54.08434782608691
+Banco Central,3748,16,0.42689434364994666,45.42164710067591
+Bancos comerciais,4571,162,3.54408225771166,45.8788740611099
+"Bancos múltiplos, com carteira comercial",358891,74329,20.710745045152983,49.59808874189283
+Caixas econômicas,84299,28249,33.51048055137071,51.2217543110436
+Crédito cooperativo,70294,36428,51.822346146186014,55.95190675353995
+"Bancos múltiplos, sem carteira comercial",4901,834,17.016935319322588,49.0712779704822
+Bancos de investimento,614,102,16.612377850162865,48.152008686210635
+Bancos de desenvolvimento,3548,319,8.990980834272829,47.303081548290116
+Agências de fomento,1526,406,26.605504587155966,50.383355176933186
+Crédito imobiliário,1572,752,47.837150127226465,55.935962680237516
+"Sociedades de crédito, financiamento e investimento - financeiras",7152,1426,19.938478747203582,46.71555741983596
+Sociedades de crédito ao microempreendedor,622,139,22.347266881028936,51.48821007502677
+Bancos de câmbio e outras instituições de intermediação não-monetária,157,20,12.738853503184714,46.02123142250532
+Arrendamento mercantil,296,62,20.945945945945947,48.731981981981974
+Sociedades de capitalização,1178,254,21.561969439728355,49.87662705149976
+Holdings de instituições financeiras,381,45,11.811023622047244,52.74103237095363
+Holdings de instituições não-financeiras,37298,9750,26.140811839776934,50.697213434143066
+"Outras sociedades de participação, exceto holdings",8061,2043,25.344250093040564,50.64264152503822
+Fundos de investimento,34,24,70.58823529411765,57.24509803921569
+Sociedades de fomento mercantil - factoring,5036,2736,54.32883240667196,55.15971670638071
+Securitização de créditos,1249,564,45.15612489991994,53.29143314651722
+Administração de consórcios para aquisição de bens e direitos,11375,3543,31.147252747252747,54.11238095238093
+Outras atividades de serviços financeiros não especificadas anteriormente,3838,1328,34.60135487232934,52.23414973076257
+Seguros de vida,13417,4596,34.25504956398599,52.52147772726139
+Seguros não-vida,33941,7990,23.540850299048348,50.10548697249154
+Seguros-saúde,5993,2019,33.68930418821959,53.2201457255687
+Resseguros,778,100,12.853470437017995,47.05269922879178
+Previdência complementar fechada,7596,2944,38.75724065297525,53.14564683166575
+Previdência complementar aberta,2419,697,28.8135593220339,51.046713517982646
+Planos de saúde,98160,62831,64.00876120619397,62.03007334963322
+Administração de bolsas e mercados de balcão organizados,1765,140,7.932011331444759,45.87157695939565
+"Atividades de intermediários em transações de títulos, valores mobiliários e mercadorias",11704,2910,24.863294600136708,49.423501936659825
+Administração de cartões de crédito,11097,3270,29.467423628007573,50.9449400738938
+Atividades auxiliares dos serviços financeiros não especificadas anteriormente,21490,9169,42.666356444858074,52.51341709322161
+Avaliação de riscos e perdas,2750,930,33.81818181818182,52.614181818181805
+"Corretores e agentes de seguros, de planos de previdência complementar e de saúde",57267,28180,49.20809541271588,54.99807917299672
+"Atividades auxiliares dos seguros, da previdência complementar e dos planos de saúde não especificadas anteriormente",5047,2155,42.69863285119873,54.06875371507825
+Atividades de administração de fundos por contrato ou comissão,4084,905,22.159647404505385,47.65515834149529
+Atividades imobiliárias de imóveis próprios,44740,14907,33.31917746982566,54.20797943674558
+"Intermediação na compra, venda e aluguel de imóveis",50633,31701,62.609365433610485,57.225090356091854
+Gestão e administração da propriedade imobiliária,54984,29997,54.555870798777825,57.025759008681334
+"Atividades jurídicas, exceto cartórios",91864,44049,47.95023077592964,53.919685622224144
+Cartórios,77415,35239,45.51960214428728,55.63844216237167
+"Atividades de contabilidade, consultoria e auditoria contábil e tributária",288759,112194,38.85385390585229,51.942280586925435
+Atividades de consultoria em gestão empresarial,102841,27767,26.99993193376183,50.80127251452878
+Serviços de arquitetura,7357,1745,23.718907163245888,50.808753568030475
+Serviços de engenharia,174362,27080,15.530906963673278,50.39654473642946
+Atividades técnicas relacionadas à arquitetura e engenharia,32441,6390,19.697296630806697,50.241248214707745
+Testes e análises técnicas,26894,5195,19.316576187997324,50.39216925708339
+Pesquisa e desenvolvimento experimental em ciências físicas e naturais,37497,6560,17.49473291196629,46.475878070245635
+Pesquisa e desenvolvimento experimental em ciências sociais e humanas,5127,2599,50.692412716988485,60.55425524998378
+Agências de publicidade,28362,4877,17.195543332628162,48.49176127682576
+"Agenciamento de espaços para publicidade, exceto em veículos de comunicação",5932,1589,26.786918408631156,50.487918633400774
+Atividades de publicidade não especificadas anteriormente,66371,15651,23.58108209910955,53.325453385765876
+Pesquisas de mercado e de opinião pública,7823,3975,50.81170906301931,55.16276790660023
+Design e decoração de interiores,2509,717,28.57712235950578,50.80709445994421
+Atividades fotográficas e similares,14255,6847,48.03226937916521,54.47419618847176
+"Atividades profissionais, científicas e técnicas não especificadas anteriormente",83676,30966,37.00702710454611,54.002206925123765
+Atividades veterinárias,14653,10798,73.69139425373643,68.87772697286114
+Locação de automóveis sem condutor,46782,21887,46.78508828181779,55.99697889501657
+"Locação de meios de transporte, exceto automóveis, sem condutor",6623,1361,20.54959987920882,50.81493784287079
+Aluguel de equipamentos recreativos e esportivos,3207,1351,42.12659806672903,56.7551190104979
+"Aluguel de fitas de vídeo, DVDs e similares",962,598,62.16216216216216,58.506583506583496
+"Aluguel de objetos do vestuário, jóias e acessórios",13823,5204,37.6473992620994,54.62962695025196
+Aluguel de objetos pessoais e domésticos não especificados anteriormente,9965,3124,31.34972403411942,53.292289680548556
+Aluguel de máquinas e equipamentos agrícolas sem operador,5286,510,9.648127128263337,43.20544835414302
+Aluguel de máquinas e equipamentos para construção sem operador,42152,7887,18.710855949895617,50.4603419371165
+Aluguel de máquinas e equipamentos para escritórios,11813,3220,27.258105477016848,52.04726431332715
+Aluguel de máquinas e equipamentos não especificados anteriormente,49343,11768,23.849380864560324,51.690445791027486
+Gestão de ativos intangíveis não-financeiros,9564,2939,30.729820158929318,51.76707793113064
+Seleção e agenciamento de mão-de-obra,96074,33317,34.67847700730687,55.601338551533196
+Locação de mão-de-obra temporária,265344,74963,28.25125120598167,53.41257261014633
+Fornecimento e gestão de recursos humanos para terceiros,170655,63457,37.18437783832879,55.76375338157885
+Agências de viagens,58865,24171,41.06175146521702,54.449282256009525
+Operadores turísticos,3593,1338,37.23907598107431,53.98172372205213
+Serviços de reservas e outros serviços de turismo não especificados anteriormente,4941,2328,47.11596842744384,55.51899075760646
+Atividades de vigilância e segurança privada,515182,19860,3.85494834835068,56.795047834228164
+Atividades de transporte de valores,48069,11183,23.26447398531278,57.21418516438176
+Atividades de monitoramento de sistemas de segurança,43169,14019,32.47469248766476,56.366520728609295
+Atividades de investigação particular,104,49,47.11538461538461,56.41025641025643
+"Serviços combinados para apoio a edifícios, exceto condomínios prediais",227425,104112,45.77860833241728,58.39761093400756
+Condomínios prediais,573064,350116,61.09544483687686,59.78624958701525
+Limpeza em prédios e em domicílios,643809,156991,24.384716585198404,56.11158071208491
+Imunização e controle de pragas urbanas,20549,4554,22.161662367998442,54.50083540156048
+Atividades de limpeza não especificadas anteriormente,101205,18196,17.97934884640087,54.342288753849445
+Atividades paisagísticas,25989,2547,9.800300126976797,49.95247989534031
+Serviços combinados de escritório e apoio administrativo,394763,137137,34.73907129087579,53.54252213775521
+"Fotocópias, preparação de documentos e outros serviços especializados de apoio administrativo",92353,40743,44.116596104078916,54.704784901410875
+Atividades de teleatendimento,451807,365209,80.83296628870292,58.4406114410209
+"Atividades de organização de eventos, exceto culturais e esportivos",47880,17035,35.57852965747703,55.09826649958225
+Atividades de cobranças e informações cadastrais,91953,36107,39.266799343142694,53.13814303684127
+Envasamento e empacotamento sob contrato,11984,1183,9.871495327102805,48.037383177570064
+Atividades de serviços prestados principalmente às empresas não especificadas anteriormente,321001,138400,43.115130482459556,55.790416021549426
+Administração pública em geral,7108390,4266263,60.017289428407835,63.93519151312738
+"Regulação das atividades de saúde, educação, serviços culturais e outros serviços sociais",52327,38333,73.25663615341983,70.97371019422731
+Regulação das atividades econômicas,14160,4061,28.679378531073446,52.97580037664783
+Relações exteriores,1706,1605,94.07971864009379,61.963657678780805
+Defesa,15224,8345,54.81476615869679,58.718558416535316
+Justiça,192649,69193,35.916615191358375,52.13866150356342
+Segurança e ordem pública,109657,64773,59.068732502257035,60.256867626629706
+Defesa Civil,322,71,22.049689440993788,50.75776397515527
+Seguridade social obrigatória,45483,31709,69.716157685289,60.83757301262735
+Educação infantil - creche,130956,70510,53.842511988759576,63.68372837696117
+Educação infantil - pré-escola,200056,121489,60.727496301035714,64.0440426680529
+Ensino fundamental,386674,227712,58.88991760501094,63.06101867033558
+Ensino médio,162503,76290,46.9468255970659,61.18870420853768
+Educação superior - graduação,302367,121024,40.025531886746904,56.02679084247504
+Educação superior - graduação e pós-graduação,373532,130116,34.83396335521455,55.162417142306396
+Educação superior - pós-graduação e extensão,38784,11248,29.0016501650165,53.8268272139714
+Educação profissional de nível técnico,55621,24679,44.36993221984502,58.8251919239137
+Educação profissional de nível tecnológico,33363,11281,33.81290651320325,58.61250487066516
+Atividades de apoio à educação,40458,18193,44.96762074249839,58.72236228516831
+Ensino de esportes,8789,4167,47.41153714870862,62.244472256987926
+Ensino de arte e cultura,8947,4283,47.87079467978093,59.069632278976144
+Ensino de idiomas,62969,18915,30.038590417507027,56.05292551361247
+Atividades de ensino não especificadas anteriormente,277318,119832,43.21104291823827,58.29601636628943
+Atividades de atendimento hospitalar,1207068,958404,79.39933789977034,76.10501037776383
+Serviços móveis de atendimento a urgências,10218,8115,79.41867293012331,79.0047628368239
+"Serviços de remoção de pacientes, exceto os serviços móveis de atendimento a urgências",2178,1546,70.98255280073462,75.30808080808086
+Atividades de atenção ambulatorial executadas por médicos e odontólogos,367478,292943,79.71715313569791,69.70759337973979
+Atividades de serviços de complementação diagnóstica e terapêutica,257762,197106,76.46821486487535,70.4783068618855
+"Atividades de profissionais da área de saúde, exceto médicos e odontólogos",80348,61208,76.17862298999353,69.16725577073065
+Atividades de apoio à gestão de saúde,92267,76233,82.62217260775792,78.27161751583272
+Atividades de atenção à saúde humana não especificadas anteriormente,83211,65172,78.32137577964453,73.11008961154961
+"Atividades de assistência a idosos, deficientes físicos, imunodeprimidos e convalescentes prestadas em residências coletivas e particulares",63315,44484,70.25823264629236,72.46683513648685
+Atividades de fornecimento de infra-estrutura de apoio e assistência a paciente no domicílio,16630,14613,87.87131689717378,79.35510122268991
+"Atividades de assistência psicossocial e à saúde a portadores de distúrbios psíquicos, deficiência mental e dependência química",16704,11858,70.9889846743295,70.7091714559387
+Atividades de assistência social prestadas em residências coletivas e particulares,26152,14102,53.92321810951361,62.34192413582136
+Serviços de assistência social sem alojamento,149599,93551,62.53450892051418,61.02492886538895
+"Artes cênicas, espetáculos e atividades complementares",12748,4151,32.561970505177285,54.38256981487293
+Criação artística,1931,543,28.120145002589332,51.546349041947195
+"Gestão de espaços para artes cênicas, espetáculos e outras atividades artísticas",1621,627,38.67982726711906,57.59798478305574
+Atividades de bibliotecas e arquivos,1719,755,43.92088423502037,55.149699437657574
+"Atividades de museus e de exploração, restauração artística e conservação de lugares e prédios históricos e atrações similares",2285,962,42.100656455142236,54.82669584245077
+"Atividades de jardins botânicos, zoológicos, parques nacionais, reservas ecológicas e áreas de proteção ambiental",5044,789,15.64234734337827,48.84047052603753
+Atividades de exploração de jogos de azar e apostas,983,579,58.90132248219736,59.14377755171246
+Gestão de instalações de esportes,2692,1047,38.89301634472511,59.137939574046584
+"Clubes sociais, esportivos e similares",81627,28941,35.455180271233786,57.56711627280184
+Atividades de condicionamento físico,103667,66101,63.76281748290198,66.0911765557023
+Atividades esportivas não especificadas anteriormente,11482,4436,38.63438425361435,57.53948208790568
+Parques de diversão e parques temáticos,12827,6545,51.02518125828331,58.120838855539134
+Atividades de recreação e lazer não especificadas anteriormente,25319,12015,47.45448082467712,58.39359111076001
+Atividades de organizações associativas patronais e empresariais,29405,12239,41.62217309981296,54.52154395510965
+Atividades de organizações associativas profissionais,33934,14958,44.07968409265044,55.4128209661893
+Atividades de organizações sindicais,98330,30537,31.05562900437303,53.68606054442506
+Atividades de associações de defesa de direitos sociais,360534,208782,57.90910149944249,61.97444993629815
+Atividades de organizações religiosas,139356,64105,46.00088980739975,58.162849105887084
+Atividades de organizações políticas,1926,984,51.09034267912772,54.70699203876773
+Atividades de organizações associativas ligadas à cultura e à arte,15795,7398,46.837606837606835,57.85974464492985
+Atividades associativas não especificadas anteriormente,100747,46823,46.475825582895766,59.28985809337578
+Reparação e manutenção de computadores e de equipamentos periféricos,39489,10004,25.33363721542708,51.52668675664953
+Reparação e manutenção de equipamentos de comunicação,10606,4498,42.40995662832359,55.08338047645982
+Reparação e manutenção de equipamentos eletroeletrônicos de uso pessoal e doméstico,22466,6314,28.10469153387341,52.82268019822541
+Reparação e manutenção de objetos e equipamentos pessoais e domésticos não especificados anteriormente,20670,5086,24.605708756652152,50.852910820835426
+"Lavanderias, tinturarias e toalheiros",51260,5081,9.912212251268045,51.76327870984521
+Cabeleireiros e outras atividades de tratamento de beleza,83339,66417,79.69498074130959,65.15932916561671
+Atividades funerárias e serviços relacionados,42192,25509,60.45932878270762,60.78768486916958
+Atividades de serviços pessoais não especificadas anteriormente,29608,15733,53.137665495811945,60.42972620012609
+Serviços domésticos,2565,660,25.730994152046783,52.074463937621815
+Organismos internacionais e outras instituições extraterritoriais,3195,1270,39.749608763693274,53.60605112154412
