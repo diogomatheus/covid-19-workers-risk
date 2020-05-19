@@ -23,12 +23,12 @@ $(document).ready(function() {
 
 	    // X and Y configuration
 		var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
-		valueAxisX.title.text = 'Trabalhadores em risco';
+		valueAxisX.title.text = 'Trabalhadores em risco (%)';
 		valueAxisX.renderer.ticks.template.disabled = true;
 		valueAxisX.renderer.axisFills.template.disabled = true;
 	  	valueAxisX.max = 100;
 	  	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
-		valueAxisY.title.text = 'Risco de impacto';
+		valueAxisY.title.text = 'Índice de Risco de Contágio';
 		valueAxisY.renderer.ticks.template.disabled = true;
 		valueAxisY.renderer.axisFills.template.disabled = true;
 		valueAxisY.max = 100;
@@ -97,7 +97,7 @@ $(document).ready(function() {
 						return data;
 					}
 				}},
-	            { title: 'Impacto', data: 'score', render: function (data, type, row) {
+	            { title: 'Risco', data: 'score', render: function (data, type, row) {
 					if(type == 'display')
 						return Number(data).toFixed(2).replace('.', ',') + '%';
 					else
@@ -227,7 +227,7 @@ function createChartSeries(chart, name, color, data) {
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{name}[/]\nTrabalhadores: {workers.formatNumber('#,###.')}\nTrabalhadores em risco: {workers_risk.formatNumber('#,###.')} ({workers_risk_percentage.formatNumber('##.00')}%)\nImpacto: {score.formatNumber('##.00')}%";
+	bullet.tooltipText = "[bold]{name}[/]\nTrabalhadores: {workers.formatNumber('#,###.')}\nTrabalhadores em risco: {workers_risk.formatNumber('#,###.')} ({workers_risk_percentage.formatNumber('##.00')}%)\nRisco: {score.formatNumber('##.00')}%";
 	bullet.showTooltipOn = 'hit';
 	// bullet.propertyFields.stroke = 'group_color';
 
