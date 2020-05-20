@@ -22,6 +22,12 @@ $(document).ready(function() {
 			$('#loading').hide();
 		});
 
+		// Marker configuration (legend)
+	    var marker = chart.legend.markers.template.children.getIndex(0);
+	    marker.width = 20;
+	    marker.height = 20;
+	    marker.cornerRadius(12, 12, 12, 12);
+
 		// Set input format for the dates
 		chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
 

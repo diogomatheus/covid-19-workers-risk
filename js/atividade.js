@@ -12,14 +12,18 @@ $(document).ready(function() {
 		chart.cursor.behavior = 'zoomXY';
 		chart.scrollbarX = new am4core.Scrollbar();
 		chart.scrollbarY = new am4core.Scrollbar();
-		/*
 		chart.legend = new am4charts.Legend();
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
-	    */
 	    chart.events.on('ready', function() {
 			$('#loading').hide();
 		});
+
+		// Marker configuration (legend)
+	    var marker = chart.legend.markers.template.children.getIndex(0);
+	    marker.width = 20;
+	    marker.height = 20;
+	    marker.cornerRadius(12, 12, 12, 12);
 
 	    // X and Y configuration
 		var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
@@ -28,18 +32,10 @@ $(document).ready(function() {
 		valueAxisX.renderer.axisFills.template.disabled = true;
 	  	valueAxisX.max = 100;
 	  	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
-		valueAxisY.title.text = 'Índice de Risco de Contágio';
+		valueAxisY.title.text = 'Índice de risco de contágio';
 		valueAxisY.renderer.ticks.template.disabled = true;
 		valueAxisY.renderer.axisFills.template.disabled = true;
 		valueAxisY.max = 100;
-
-	  	// Marker configuration
-	    /*
-	    var marker = chart.legend.markers.template.children.getIndex(0);
-	    marker.width = 20;
-	    marker.height = 20;
-	    marker.cornerRadius(12, 12, 12, 12);
-	    */
 
 	    // Brazilian data
 		var brazil_data = data;
@@ -75,6 +71,7 @@ $(document).ready(function() {
 			data: dataset,
 	        columns: [
 	            { title: 'Atividade', data: 'name' },
+	            { title: 'Categoria', data: 'group' },
 	            { title: 'Trabalhadores', data: 'workers', render: function (data, type, row) {
 					if(type == 'display') {
 						var formatter = new Intl.NumberFormat('pt-BR', {
@@ -105,9 +102,9 @@ $(document).ready(function() {
 	            }}
 	        ],
 	        'columnDefs': [
-				{ 'width': '80px', 'targets': 3 }
+				{ 'width': '80px', 'targets': 4 }
 			],
-	        order: [[ 3, 'desc']],
+	        order: [[ 4, 'desc']],
 	        'language': {
 			    'sEmptyTable': 'Nenhum registro encontrado',
 			    'sInfo': 'Mostrando de _START_ até _END_ de _TOTAL_ registros',
@@ -159,7 +156,7 @@ $(document).ready(function() {
 				series.data = brazil_data.filter(function(item) {
 					return item.score >= parseInt(sliderValues[0]) && 
 						   item.score <= parseInt(sliderValues[1]) && 
-						   series.name === 'Default';
+						   series.name === item.group;
 				});
 			});
 
@@ -174,7 +171,6 @@ $(document).ready(function() {
 		});
 
 		// Update infertace after legend hit
-		/*
 		chart.legend.itemContainers.template.events.on('hit', function(ev) {
 			var sliderValues = slider.noUiSlider.get();
 			var unavailableSeries = [];	
@@ -193,7 +189,6 @@ $(document).ready(function() {
 		    datatable.rows.add(dataset);
 		    datatable.draw();
 		});
-		*/
 
 	});
 
@@ -201,10 +196,32 @@ $(document).ready(function() {
 
 function addChartSeries(chart, dataset) {
 	var chartSeries = [
-		{ name: 'Default', color: '#e53935' }
+		{ name: 'Administração Pública, Defesa e Seguridade Social', color: '#8a5a3a' },
+		{ name: 'Agricultura, Pecuária, Produção Florestal, Pesca e Aquicultura', color: '#10540a' },
+		{ name: 'Água, Esgoto, Atividades de Gestão de Resíduos e Descontaminação', color: '#f242f5' },
+		{ name: 'Alojamento e Alimentação', color: '#e03a71' },
+		{ name: 'Artes, Cultura, Esporte e Recreação', color: '#9e8b75' },
+		{ name: 'Atividades Administrativas e Serviços Complementares', color: '#343deb' },
+		{ name: 'Atividades Financeiras, Seguros e Serviços Relacionados', color: '#f5e642' },
+		{ name: 'Atividades Imobiliárias', color: '#9000ff' },
+		{ name: 'Atividades Profissionais, Científicas e Técnicas', color: '#8debe0' },
+		{ name: 'Comércio & Reparação de Veículos Automotores e Motocicletas', color: '#abf051' },
+		{ name: 'Construção', color: '#8a8a8a' },
+		{ name: 'Educação', color: '#deb147' },
+		{ name: 'Eletricidade e Gás', color: '#3a8a7f' },
+		{ name: 'Indústrias de Transformação', color: '#314b6b' },
+		{ name: 'Indústrias Extrativas', color: '#4acc3b' },
+		{ name: 'Informação e Comunicação', color: '#f58742' },
+		{ name: 'Organismos Internacionais e Outras Instituições Extraterritoriais', color: '#000000' },
+		{ name: 'Outras Atividades de Serviços', color: '#d051f0' },
+		{ name: 'Saúde Humana e Serviços Sociais', color: '#e03a3a' },
+		{ name: 'Serviços Domésticos', color: '#cfa7a7' },
+		{ name: 'Transporte, Armazenagem e Correio', color: '#f7b78f' }
 	];
 	chartSeries.forEach(function(series) {
-		createChartSeries(chart, series.name, series.color, dataset);
+		createChartSeries(chart, series.name, series.color, dataset.filter(function(item) {
+			return item.group == series.name
+		}));
 	});
 }
 
@@ -222,14 +239,14 @@ function createChartSeries(chart, name, color, data) {
 
 	var bullet = series.bullets.push(new am4core.Circle());
 	bullet.fill = am4core.color('#e53935');
-	// bullet.propertyFields.fill = "group_color";
+	bullet.propertyFields.fill = "group_color";
 	bullet.fillOpacity = 0.4;
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
 	bullet.tooltipText = "[bold]{name}[/]\nTrabalhadores: {workers.formatNumber('#,###.')}\nTrabalhadores em risco: {workers_risk.formatNumber('#,###.')} ({workers_risk_percentage.formatNumber('##.00')}%)\nRisco: {score.formatNumber('##.00')}%";
 	bullet.showTooltipOn = 'hit';
-	// bullet.propertyFields.stroke = 'group_color';
+	bullet.propertyFields.stroke = 'group_color';
 
 	var hoverState = bullet.states.create('hover');
 	hoverState.properties.fillOpacity = 0.6;

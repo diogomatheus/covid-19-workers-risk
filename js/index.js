@@ -19,6 +19,12 @@ $(document).ready(function() {
 			$('#loading').hide();
 		});
 
+		// Marker configuration (legend)
+	    var marker = chart.legend.markers.template.children.getIndex(0);
+	    marker.width = 20;
+	    marker.height = 20;
+	    marker.cornerRadius(12, 12, 12, 12);
+
 	    // X and Y configuration
 		var valueAxisX = chart.xAxes.push(new am4charts.ValueAxis());
 		valueAxisX.title.text = 'Proximidade física';
@@ -30,12 +36,6 @@ $(document).ready(function() {
 		valueAxisY.renderer.ticks.template.disabled = true;
 		valueAxisY.renderer.axisFills.template.disabled = true;
 		valueAxisY.max = 100;
-
-	  	// Marker configuration
-	    var marker = chart.legend.markers.template.children.getIndex(0);
-	    marker.width = 20;
-	    marker.height = 20;
-	    marker.cornerRadius(12, 12, 12, 12);
 
 	    // Brazilian data
 		var brazil_data = data;
@@ -246,7 +246,7 @@ function createChartSeries(chart, name, color, data) {
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}[/]\nCategoria: {group}\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}\nRisco: {score.formatNumber('##.00')} pts";
+	bullet.tooltipText = "[bold]{title}[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}\nRisco: {score.formatNumber('##.00')} pts";
 	bullet.showTooltipOn = 'hit';
 	bullet.propertyFields.stroke = 'group_color';
 
