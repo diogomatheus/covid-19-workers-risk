@@ -35,7 +35,7 @@ $(document).ready(function() {
 		valueAxisY.title.text = 'Índice de risco de contágio';
 		valueAxisY.renderer.ticks.template.disabled = true;
 		valueAxisY.renderer.axisFills.template.disabled = true;
-		valueAxisY.max = 100;
+		valueAxisY.max = 80;
 
 	    // Brazilian data
 		var brazil_data = data;
