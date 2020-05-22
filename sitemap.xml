@@ -10,30 +10,30 @@
         <loc>http://impactocovid.com.br/atividade.html</loc>
         <lastmod>2020-05-17T12:00:00-03:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://impactocovid.com.br/municipio.html</loc>
         <lastmod>2020-04-01T12:00:00-03:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>http://impactocovid.com.br/termometro-quarentena.html</loc>
-        <lastmod>2020-05-19T12:00:00-03:00</lastmod>
+        <lastmod>2020-05-21T12:00:00-03:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.6</priority>
     </url>
     <url>
         <loc>http://impactocovid.com.br/repercussao-midia.html</loc>
         <lastmod>2020-05-06T12:00:00-03:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.4</priority>
     </url>
     <url>
         <loc>http://impactocovid.com.br/colaboradores.html</loc>
         <lastmod>2020-04-06T12:00:00-03:00</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>1.0</priority>
+        <priority>0.4</priority>
     </url>
 </urlset>
