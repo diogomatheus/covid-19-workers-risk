@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('select').formSelect();
 
 	// Load the geojson
-	$.getJSON('dataset/mobilidade-dataset.json', function(data) {
+	$.getJSON('dataset/brazil-mobility-dataset.json', function(data) {
 		am4core.useTheme(am4themes_animated);
 		var chart = am4core.create("chart-date-based", am4charts.XYChart);
 		chart.language.locale = am4lang_pt_BR;
@@ -33,7 +33,11 @@ $(document).ready(function() {
 
 		// Create axes
 		var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+		dateAxis.title.fontSize = 14;
+		dateAxis.renderer.labels.template.fontSize = 12;
 		var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+		valueAxis.title.fontSize = 14;
+		valueAxis.renderer.labels.template.fontSize = 12;
 
 		// Create series list
 		var seriesList = addChartSeries(chart);
@@ -82,22 +86,16 @@ function createChartSeries(chart, name, label, color) {
 	// Create series
 	var series = chart.series.push(new am4charts.LineSeries());
 	series.dataFields.valueY = name;
-	series.dataFields.dateX = 'date';
-	series.tooltipText = label + ": {" + name + "}%";
+	series.dataFields.dateX = 'date';	
 	series.minBulletDistance = 20;
 	series.name = label;
 	series.fill = am4core.color(color);
 	series.stroke = series.fill;
 	series.strokeWidth = 2;
-
-	// Drop-shaped tooltips
+	series.tooltipText = label + ": {" + name + "}%";
+	series.tooltip.fontSize = 13;
 	series.tooltip.background.cornerRadius = 20;
 	series.tooltip.background.strokeOpacity = 0;
-	series.tooltip.pointerOrientation = "vertical";
-	series.tooltip.label.minWidth = 40;
-	series.tooltip.label.minHeight = 40;
-	series.tooltip.label.textAlign = "middle";
-	series.tooltip.label.textValign = "middle";
 
 	// Make bullets grow on hover
 	var bullet = series.bullets.push(new am4charts.CircleBullet());

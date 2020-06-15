@@ -51,22 +51,22 @@ main {
 
 #chart-bubble-occupations {
 	width: 100%;
-	height: 850px
+	height: 850px;
 }
 
 #chart-bubble-activities {
 	width: 100%;
-	height: 1120px
+	height: 1120px;
 }
 
 #chart-map {
 	width: 100%;
-	height: 560px
+	height: 560px;
 }
 
 #chart-date-based {
 	width: 100%;
-	height: 500px
+	height: 500px;
 }
 
 #chart-map-legend-container {

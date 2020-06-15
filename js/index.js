@@ -31,11 +31,15 @@ $(document).ready(function() {
 		valueAxisX.renderer.ticks.template.disabled = true;
 		valueAxisX.renderer.axisFills.template.disabled = true;
 	  	valueAxisX.max = 100;
+	  	valueAxisX.title.fontSize = 14;
+		valueAxisX.renderer.labels.template.fontSize = 12;
 	  	var valueAxisY = chart.yAxes.push(new am4charts.ValueAxis());
 		valueAxisY.title.text = 'Exposição à doenças ou infecções';
 		valueAxisY.renderer.ticks.template.disabled = true;
 		valueAxisY.renderer.axisFills.template.disabled = true;
 		valueAxisY.max = 100;
+		valueAxisY.title.fontSize = 14;
+		valueAxisY.renderer.labels.template.fontSize = 12;
 
 	    // Brazilian data
 		var brazil_data = data;
@@ -237,6 +241,7 @@ function createChartSeries(chart, name, color, data) {
 	series.data = data;
 	series.fill = am4core.color(color);
 	series.stroke = am4core.color(color);
+	series.tooltip.fontSize = 13;
 	series.tooltip.pointerOrientation = 'down';
 
 	var bullet = series.bullets.push(new am4core.Circle());
