@@ -10,7 +10,7 @@ $(document).ready(function() {
 	$('.sidenav').sidenav();
 
 	// Load the geojson
-	$.getJSON('dataset/municipio-dataset.geojson', function(data) {
+	$.getJSON('dataset/brazil-city-dataset.geojson', function(data) {
 		dataset = data;
 		configureMap(dataset);
 		configureDatatable(dataset);		
@@ -62,7 +62,7 @@ function configureMap(data) {
 	map.data.addListener('click', function(event) {
 		var feature = event.feature;
 		var html = '<strong>' + feature.getProperty('title') +' (' + feature.getProperty('state') + ')</strong>';
-		html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_total'));
+		html += '<br />Trabalhadores: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers'));
 		html += '<br />Trabalhadores em risco: ' + new Intl.NumberFormat('pt-BR', { style: 'decimal' }).format(feature.getProperty('workers_risk'));
 		html += ' (' + Number(feature.getProperty('workers_risk_percentage') * 100).toFixed(2).replace('.', ',') + '%)';
 		html += '<br />PIB: ' + new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(feature.getProperty('pib'));
@@ -198,7 +198,7 @@ function configureDatatable(data) {
 		columns: [
 			{ title: 'Município', data: 'properties.title' },
 			{ title: 'Estado', data: 'properties.state' },
-			{ title: 'Trabalhadores', data: 'properties.workers_total', render: function (data, type, row) {
+			{ title: 'Trabalhadores', data: 'properties.workers', render: function (data, type, row) {
 				if(type == 'display') {
 					var formatter = new Intl.NumberFormat('pt-BR', {
 						style: 'decimal'

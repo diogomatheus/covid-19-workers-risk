@@ -3,7 +3,7 @@ $(document).ready(function() {
 	// Sidenav configuration
 	$('.sidenav').sidenav();
 
-	$.getJSON('dataset/cbo-dataset.json', function(data) {
+	$.getJSON('dataset/brazil-occupation-dataset.json', function(data) {
 		// Bubble chart
 		am4core.useTheme(am4themes_frozen);
 		var chart = am4core.create('chart-bubble-occupations', am4charts.XYChart);
