@@ -82,7 +82,7 @@ $(document).ready(function() {
 					}
 	            }},
 	            { title: 'Categoria', data: 'group' },
-	            { title: 'Trabalhadores', data: 'employment', render: function (data, type, row) {
+	            { title: 'Trabalhadores', data: 'workers', render: function (data, type, row) {
 					if(type == 'display') {
 						var formatter = new Intl.NumberFormat('pt-BR', {
 							style: 'decimal'
@@ -235,7 +235,7 @@ function createChartSeries(chart, name, color, data) {
 	var series = chart.series.push(new am4charts.LineSeries());
 	series.dataFields.valueY = 'exposed_to_disease_or_infections';
 	series.dataFields.valueX = 'physical_proximity';
-	series.dataFields.value = 'employment';
+	series.dataFields.value = 'workers';
 	series.strokeOpacity = 0;
 	series.name = name;
 	series.data = data;
@@ -251,7 +251,7 @@ function createChartSeries(chart, name, color, data) {
 	bullet.strokeOpacity = 0.5;
 	bullet.strokeWidth = 1;
 	bullet.hiddenState.properties.opacity = 0;
-	bullet.tooltipText = "[bold]{title}[/]\nTrabalhadores: {employment.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}\nRisco: {score.formatNumber('##.00')} pts";
+	bullet.tooltipText = "[bold]{title}[/]\nTrabalhadores: {workers.formatNumber('#,###.')}\nMédia salarial: R$ {average_salary.formatNumber('#,###.##')}\nExposição à doenças: {exposed_to_disease_or_infections}\nProximidade física: {physical_proximity}\nContato com outras pessoas: {contact_with_others}\nRisco: {score.formatNumber('##.00')} pts";
 	bullet.showTooltipOn = 'hit';
 	bullet.propertyFields.stroke = 'group_color';
 
