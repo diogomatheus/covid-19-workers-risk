@@ -10,12 +10,12 @@
             gtag('config', 'UA-156894371-3');
         </script>
 
-        <title>Risco de Contágio por Município no Brasil - Impacto COVID-19 (coronavírus)</title>
+        <title>Risco de Contágio por Atividade Essencial no Brasil - Impacto COVID-19 (coronavírus)</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta name="description" content="Análise de risco de contágio por município considerando diferente características (e.g., exposição à doenças, proximidade física) relacionadas aos empregos formais com base no cruzamento dos dados de ocupação do Brasil e EUA.">
-        <meta name="keywords" content="covid-19, coronavírus, análise, risco, contágio, município, emprego formal, exposição à doenças, proximidade física, contato com outras pessoas, Brasil, EUA, Estados Unidos">
+        <meta name="description" content="Análise de risco de contágio por atividade essencial considerando diferente características (e.g., exposição à doenças, proximidade física) relacionadas aos empregos formais com base no cruzamento dos dados de ocupação do Brasil e EUA.">
+        <meta name="keywords" content="covid-19, coronavírus, análise, risco, contágio, ocupação, emprego formal, exposição à doenças, proximidade física, contato com outras pessoas, Brasil, EUA, Estados Unidos">
         <meta name="robots" content="all" />
 
         <link rel="shortcut icon" href="image/favicon.png" type="image/ico"/>
@@ -27,6 +27,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize plugin-->
         <link type="text/css" rel="stylesheet" href="plugins/materialize/css/materialize.min.css" media="screen,projection"/>
+        <!--Import noUiSlider plugin-->
+        <link type="text/css" rel="stylesheet" href="plugins/noUiSlider/nouislider.min.css" rel="stylesheet" />
         <!--Import DataTables plugin-->
         <link rel="stylesheet" type="text/css" href="plugins/DataTables/datatables.min.css"/>
         <!--Import application style-->
@@ -46,7 +48,7 @@
                     <div class="nav-wrapper">
                         <div class="row">
                             <div class="col s12 m10 offset-m1">
-                                <h1 class="header grey-text text-darken-3">Risco por Município</h1>
+                                <h1 class="header grey-text text-darken-3">Risco por Atividade Essencial</h1>
                             </div>
                         </div>
                     </div>
@@ -65,10 +67,10 @@
                 <li class="bold">
                     <a href="/atividade.html" class="waves-effect waves-teal">Risco por Atividade</a>
                 </li>
-                <li class="bold">
+                <li class="bold active">
                     <a href="/atividade-essencial.html" class="waves-effect waves-teal">Risco por Atividade Essencial</a>
                 </li>
-                <li class="bold active">
+                <li class="bold">
                     <a href="/municipio.html" class="waves-effect waves-teal">Risco por Município</a>
                 </li>
                 <li class="bold">
@@ -83,20 +85,16 @@
             </ul>
         </header>
         <main>
-            <div id="chart-cities"></div>
+            <br />
+            <div id="chart-essential-activities"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col s12">
-                        <table id="datatable" class="display responsive-table" width="100%"></table>
-                    </div>
-                </div>
-                <div class="row">
                     <div id="research-notes" class="col s12">
-                        <p>Fonte: <a href="https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html">The Workers Who Face the Greatest Coronavirus Risk</a> - Lazaro Gamio (New York Times), <a href="http://trabalho.gov.br/rais">Relação Anual de Informações Sociais</a> (RAIS), <a href="http://www.mtecbo.gov.br/cbosite/pages/informacoesGerais.jsf">Classificação Brasileira de Ocupações</a> (CBO). Dados sobre número de pessoas empregadas e salário médio são da RAIS de dezembro de 2018, a mais recente disponível.</p>
+                        <p>Fonte: <a href="https://www.nytimes.com/interactive/2020/03/15/business/economy/coronavirus-worker-risk.html">The Workers Who Face the Greatest Coronavirus Risk</a> - Lazaro Gamio (New York Times), <a href="https://covid.saude.gov.br/">Painel Coronavírus</a> (Ministério da Saúde, 10/06/2020), <a href="http://trabalho.gov.br/rais">Relação Anual de Informações Sociais</a> (RAIS), <a href="http://www.mtecbo.gov.br/cbosite/pages/informacoesGerais.jsf">Classificação Brasileira de Ocupações</a> (CBO). Dados sobre número de pessoas empregadas e salário médio são da RAIS de dezembro de 2018, a mais recente disponível.</p>
                         <p>Para mais informações, confira nossa <a href="nota-metodologica/risco-contagio.pdf">Nota Metodológica do Risco de Contágio</a>.</p>
                         <p>Está usando ou deseja utilizar os dados disponibilizados nesta pesquisa? <a href='mailto:yuriodelima@cos.ufrj.br,dmc@cos.ufrj.br,jano@cos.ufrj.br'>Entre em contato conosco.</a></p>
                         <p>
-                            Citar como: LIMA, Y. O., COSTA, D. M., SOUZA, J. M. Risco de Contágio por Município no Brasil. Impacto COVID-19, Rio de Janeiro, 1 de Abr. de 2020. Disponível em: https://impactocovid.com.br/municipio.html. Acesso em: 
+                            Citar como: LIMA, Y. O., COSTA, D. M., SOUZA, J. M. Risco de Contágio por Atividade Essencial no Brasil. Impacto COVID-19, Rio de Janeiro, 22 de Jun. de 2020. Disponível em: https://impactocovid.com.br/atividade-essencial.html. Acesso em: 
                             <script>
                             var date = new Date;
                             var year = date.getFullYear();
@@ -159,13 +157,19 @@
         <!--Import materialize plugin-->
         <script type="text/javascript" src="plugins/materialize/js/materialize.min.js"></script>
 
-        <!--Import google maps-->
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1RHo5MCeAT-uRDj3sMeI1lMA1fLTiGuc"></script>
+        <!--Import nouislider plugin-->
+        <script type="text/javascript" src="plugins/noUiSlider/nouislider.min.js"></script>
+
+        <!--Import amcharts plugin-->
+        <script type="text/javascript" src="plugins/amcharts4/core.js"></script>
+        <script type="text/javascript" src="plugins/amcharts4/charts.js"></script>
+        <script type="text/javascript" src="plugins/amcharts4/themes/animated.js"></script>
+        <script type="text/javascript" src="plugins/amcharts4/lang/pt_BR.js"></script>
 
         <!--Import DataTables plugin-->
         <script type="text/javascript" src="plugins/DataTables/datatables.min.js"></script>
 
-        <!--Import municipio script-->
-        <script type="text/javascript" src="js/municipio.js"></script>
+        <!--Import index script-->
+        <script type="text/javascript" src="js/atividade-essencial.js"></script>
     </body>
 </html>

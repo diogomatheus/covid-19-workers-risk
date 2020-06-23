@@ -19,7 +19,7 @@ $(document).ready(function() {
 });
 
 function configureMap(data) {
-	map = new google.maps.Map(document.getElementById('chart-map'), {
+	map = new google.maps.Map(document.getElementById('chart-cities'), {
 		center: { lat: -14.726084296948184, lng: -55.21875 },
 		zoom: 4,
 		minZoom: 4,
@@ -30,17 +30,17 @@ function configureMap(data) {
 
 	// Create the map legend container
 	var map_legend_controller = document.createElement('div');
-	map_legend_controller.id = 'chart-map-legend-container';
+	map_legend_controller.id = 'chart-cities-legend-container';
 	map_legend_controller.innerHTML = '+ Risco <img src="image/chart-map-legend.jpeg" class="responsive-img"> - Risco';
 	map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(map_legend_controller);
 
 	// Create the map type container
 	var map_type_container = document.createElement('div');
-	map_type_container.id = 'chart-map-type-container';
-	map_type_container.innerHTML = '<select id="chart-map-type"><option value="Risco de Impacto" selected="selected">Risco de Impacto</option><option value="Trabalhadores em Risco">Trabalhadores em Risco</option></select>';
+	map_type_container.id = 'chart-cities-type-container';
+	map_type_container.innerHTML = '<select id="chart-cities-type"><option value="Risco de Impacto" selected="selected">Risco de Impacto</option><option value="Trabalhadores em Risco">Trabalhadores em Risco</option></select>';
 	map.controls[google.maps.ControlPosition.LEFT_TOP].push(map_type_container);
 	$(map_type_container).change(function() {   
-		map_type = $('#chart-map-type').val();
+		map_type = $('#chart-cities-type').val();
 		map.data.forEach(function(feature) { map.data.remove(feature); });
 		map.data.addGeoJson(dataset);
 		var order_column = (map_type === 'Risco de Impacto') ? 6 : 3;

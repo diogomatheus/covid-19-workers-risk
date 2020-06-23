@@ -49,27 +49,27 @@ main {
     margin: auto;
 }
 
-#chart-bubble-occupations {
+#chart-occupations {
 	width: 100%;
 	height: 850px;
 }
 
-#chart-bubble-activities {
+#chart-activities {
 	width: 100%;
 	height: 1120px;
 }
 
-#chart-map {
+#chart-essential-activities {
+	width: 100%;
+	height: 550px;
+}
+
+#chart-cities {
 	width: 100%;
 	height: 560px;
 }
 
-#chart-date-based {
-	width: 100%;
-	height: 500px;
-}
-
-#chart-map-legend-container {
+#chart-cities-legend-container {
 	width: 55px;
 	padding: 5px;
 	left: 10px !important;
@@ -83,18 +83,23 @@ main {
 	border-radius: 5px;
 }
 
-#chart-map-type-container {
+#chart-cities-type-container {
 	left: 10px !important;
 	top: 10px !important;
 }
 
-#chart-map-type {
+#chart-cities-type {
 	display: block !important;
 }
 
-#chart-map-legend img {
+#chart-cities-legend img {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+#chart-mobility {
+	width: 100%;
+	height: 500px;
 }
 
 #datatable_length {

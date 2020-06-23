@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$.getJSON('dataset/brazil-occupation-dataset.json', function(data) {
 		// Bubble chart
 		am4core.useTheme(am4themes_frozen);
-		var chart = am4core.create('chart-bubble-occupations', am4charts.XYChart);
+		var chart = am4core.create('chart-occupations', am4charts.XYChart);
 		chart.language.locale = am4lang_pt_BR;
 		chart.cursor = new am4charts.XYCursor();
 		chart.cursor.behavior = 'zoomXY';

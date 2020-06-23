@@ -12,7 +12,7 @@ $(document).ready(function() {
 	// Load the geojson
 	$.getJSON('dataset/brazil-mobility-dataset.json', function(data) {
 		am4core.useTheme(am4themes_animated);
-		var chart = am4core.create("chart-date-based", am4charts.XYChart);
+		var chart = am4core.create("chart-mobility", am4charts.XYChart);
 		chart.language.locale = am4lang_pt_BR;
 		chart.legend = new am4charts.Legend();
 		chart.legend.labels.template.fontSize = 12;

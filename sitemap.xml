@@ -13,6 +13,12 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>http://impactocovid.com.br/atividade-essencial.html</loc>
+        <lastmod>2020-06-22T12:00:00-03:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
         <loc>http://impactocovid.com.br/municipio.html</loc>
         <lastmod>2020-04-01T12:00:00-03:00</lastmod>
         <changefreq>monthly</changefreq>
