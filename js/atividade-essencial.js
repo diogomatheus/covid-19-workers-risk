@@ -60,7 +60,7 @@ $(document).ready(function() {
 		workerRiskState.properties.scale = 1.2;
 
 		var workerRiskLabel = workerRiskSeries.bullets.push(new am4charts.LabelBullet());
-		workerRiskLabel.label.text = "Decreto: {decree_id}";
+		// workerRiskLabel.label.text = "Decreto: {decree_id}";
 		workerRiskLabel.label.fontSize = 12;
 		workerRiskLabel.label.horizontalCenter = "left";
 		workerRiskLabel.label.dx = 14;
