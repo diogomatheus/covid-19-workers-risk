@@ -1,7 +1,7 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
-	// Sidenav configuration
-	$('.sidenav').sidenav();
+	// Materialize sidenav
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 	$.getJSON('dataset/brazil-essential-activity-dataset.json', function(data) {
 		// Decree chart
@@ -11,7 +11,7 @@ $(document).ready(function() {
 		chart.colors.step = 2;
 		chart.maskBullets = false;
 		chart.events.on('ready', function() {
-			$('#loading').hide();
+			document.getElementById('loading').style.display = 'none';
 		});
 
 		// Data
@@ -94,3 +94,13 @@ $(document).ready(function() {
 	});
 
 });
+
+function getJSON(url) {
+    var request = new XMLHttpRequest();
+    request.open('GET', url, true);
+    request.onload = function() {
+        if (this.status >= 200 && this.status < 400)
+            return JSON.parse(this.response);
+    };
+    request.send();
+}

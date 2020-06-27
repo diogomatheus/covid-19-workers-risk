@@ -1,6 +1,6 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 	
-	// Sidenav configuration
-	$('.sidenav').sidenav();
+	// Materialize sidenav
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 });

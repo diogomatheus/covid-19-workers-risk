@@ -1,13 +1,13 @@
 var dataset;
 var region = 'Brasil';
 
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 	
-	// Sidenav configuration
-	$('.sidenav').sidenav();
+	// Materialize sidenav
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
-	// Select configuration
-	$('select').formSelect();
+	// Materialize select
+	M.FormSelect.init(document.querySelectorAll('select'));
 
 	// Load the geojson
 	$.getJSON('dataset/brazil-mobility-dataset.json', function(data) {
@@ -19,7 +19,7 @@ $(document).ready(function() {
 	    chart.legend.useDefaultMarker = true;
 		chart.data = data[region];
 		chart.events.on('ready', function() {
-			$('#loading').hide();
+			document.getElementById('loading').style.display = 'none';
 		});
 
 		// Marker configuration (legend)
@@ -63,8 +63,8 @@ $(document).ready(function() {
 		dateAxis.start = 0.79;
 		dateAxis.keepSelection = true;
 
-		$('#region').on('change', function () {
-			region = $('#region').val();
+		document.getElementById('region').addEventListener('change', function() {
+			region = document.getElementById('region').value;
 			chart.data = data[region];
 		});
 	});

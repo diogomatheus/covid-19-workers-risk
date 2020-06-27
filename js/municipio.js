@@ -4,10 +4,10 @@ var map_type = 'Risco de Impacto';
 var infowindow = new google.maps.InfoWindow();
 var datatable;
 
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 	
-	// Sidenav configuration
-	$('.sidenav').sidenav();
+	// Materialize sidenav
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 	// Load the geojson
 	$.getJSON('dataset/brazil-city-dataset.geojson', function(data) {
@@ -39,8 +39,8 @@ function configureMap(data) {
 	map_type_container.id = 'chart-cities-type-container';
 	map_type_container.innerHTML = '<select id="chart-cities-type"><option value="Risco de Impacto" selected="selected">Risco de Impacto</option><option value="Trabalhadores em Risco">Trabalhadores em Risco</option></select>';
 	map.controls[google.maps.ControlPosition.LEFT_TOP].push(map_type_container);
-	$(map_type_container).change(function() {   
-		map_type = $('#chart-cities-type').val();
+	map_type_container.addEventListener('change', function() {
+		map_type = document.getElementById('chart-cities-type').value;
 		map.data.forEach(function(feature) { map.data.remove(feature); });
 		map.data.addGeoJson(dataset);
 		var order_column = (map_type === 'Risco de Impacto') ? 6 : 3;
@@ -75,7 +75,7 @@ function configureMap(data) {
 	});
 
 	map.addListener('tilesloaded', function() {
-		$('#loading').hide();
+		document.getElementById('loading').style.display = 'none';
 	});
 }
 

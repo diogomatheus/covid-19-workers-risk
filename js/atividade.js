@@ -1,7 +1,7 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
-	// Sidenav configuration
-	$('.sidenav').sidenav();
+	// Materialize sidenav
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 	$.getJSON('dataset/brazil-activity-class-dataset.json', function(data) {
 		// Bubble chart
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
 	    chart.events.on('ready', function() {
-			$('#loading').hide();
+			document.getElementById('loading').style.display = 'none';
 		});
 
 		// Marker configuration (legend)
@@ -143,12 +143,10 @@ $(document).ready(function() {
 			}
 		});
 
-		// Tooltip configuration
-		$('.tooltipped').tooltip({ html: true });
-
-		// Tooltip configuration based on datatables events
+		// Materialize tooltip init
+		materializeTooltipInit();
 		datatable.on('draw', function () {
-	    	$('.tooltipped').tooltip({ html: true });
+	    	materializeTooltipInit();
 		});
 
 		// Update interface after slider change
@@ -170,7 +168,7 @@ $(document).ready(function() {
 					   unavailableSeries.indexOf(item.group) === -1;
 			});
 			datatable.clear();
-		    datatable.rows.add(brazil_data);
+		    datatable.rows.add(datatable_dataset);
 		    datatable.draw();
 		});
 
@@ -193,7 +191,6 @@ $(document).ready(function() {
 		    datatable.rows.add(dataset);
 		    datatable.draw();
 		});
-
 	});
 
 });
@@ -261,4 +258,9 @@ function createChartSeries(chart, name, color, data) {
 	bullet.adapter.add('tooltipY', function (tooltipY, target) {
 	    return -target.radius;
 	});
+}
+
+function materializeTooltipInit() {
+	var elems = document.querySelectorAll('.tooltipped');
+    var instances = M.Tooltip.init(elems, { html: true });
 }

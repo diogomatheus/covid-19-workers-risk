@@ -1,7 +1,7 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function(event) {
 
-	// Sidenav configuration
-	$('.sidenav').sidenav();
+	// Materialize sidenav
+	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 	$.getJSON('dataset/brazil-occupation-dataset.json', function(data) {
 		// Bubble chart
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		chart.legend.labels.template.fontSize = 12;
 	    chart.legend.useDefaultMarker = true;
 	    chart.events.on('ready', function() {
-			$('#loading').hide();
+			document.getElementById('loading').style.display = 'none';
 		});
 
 		// Marker configuration (legend)
@@ -153,12 +153,10 @@ $(document).ready(function() {
 			}
 		});
 
-		// Tooltip configuration
-		$('.tooltipped').tooltip({ html: true });
-
-		// Tooltip configuration based on datatables events
+		// Materialize tooltip
+		M.Tooltip.init(document.querySelectorAll('.tooltipped'), { html: true });
 		datatable.on('draw', function () {
-	    	$('.tooltipped').tooltip({ html: true });
+	    	M.Tooltip.init(document.querySelectorAll('.tooltipped'), { html: true });
 		});
 
 		// Update interface after slider change
@@ -203,7 +201,6 @@ $(document).ready(function() {
 		    datatable.rows.add(dataset);
 		    datatable.draw();
 		});
-
 	});
 
 });
