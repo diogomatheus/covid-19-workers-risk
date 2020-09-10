@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// Materialize sidenav
 	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
-	$.getJSON('dataset/brazil-essential-activity-dataset.json', function(data) {
+	$.getJSON('dataset/brazilian-essential-economic-activities.json', function(data) {
 		// Decree chart
 		am4core.useTheme(am4themes_animated);
 		var chart = am4core.create("chart-essential-activities", am4charts.XYChart);

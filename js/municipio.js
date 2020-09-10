@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
 	// Load the geojson
-	$.getJSON('dataset/brazil-city-dataset.geojson', function(data) {
+	$.getJSON('dataset/brazilian-cities.geojson', function(data) {
 		dataset = data;
 		configureMap(dataset);
 		configureDatatable(dataset);		

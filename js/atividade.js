@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	// Materialize sidenav
 	M.Sidenav.init(document.querySelectorAll('.sidenav'));
 
-	$.getJSON('dataset/brazil-activity-class-dataset.json', function(data) {
+	$.getJSON('dataset/brazilian-economic-activities-class.json', function(data) {
 		// Bubble chart
 		am4core.useTheme(am4themes_frozen);
 		var chart = am4core.create('chart-activities', am4charts.XYChart);
